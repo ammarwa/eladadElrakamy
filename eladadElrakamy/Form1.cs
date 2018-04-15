@@ -23,8 +23,7 @@ namespace eladadElrakamy
             {
                 if(textBox2.Text == "admin")
                 {
-                    maintoolstrip.Enabled = true;
-                    Refresh();
+                    maintoolstrip.Visible = true;
                 }
             }
         }
