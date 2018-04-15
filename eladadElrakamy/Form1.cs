@@ -27,5 +27,11 @@ namespace eladadElrakamy
                 }
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            maintoolstrip.Visible = false;
+            toolStripButton1.Visible = false;
+        }
     }
 }
