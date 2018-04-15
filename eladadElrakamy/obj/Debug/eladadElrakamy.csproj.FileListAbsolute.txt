@@ -1,0 +1,9 @@
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\eladadElrakamy.exe.config
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\eladadElrakamy.exe
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\eladadElrakamy.pdb
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.Home.resources
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.Properties.Resources.resources
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.csproj.GenerateResource.Cache
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.csproj.CoreCompileInputs.cache
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.exe
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.pdb

@@ -16,5 +16,17 @@ namespace eladadElrakamy
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text == "admin")
+            {
+                if(textBox2.Text == "admin")
+                {
+                    maintoolstrip.Enabled = true;
+                    Refresh();
+                }
+            }
+        }
     }
 }
