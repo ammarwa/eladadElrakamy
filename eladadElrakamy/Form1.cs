@@ -19,7 +19,8 @@ namespace eladadElrakamy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text == "admin")
+            string query = "SELECT * FROM Users WHERE username='"+textBox1.Text+"' AND password='"+textBox2.Text+"'";
+            if (textBox1.Text == "admin")
             {
                 if(textBox2.Text == "admin")
                 {
@@ -35,6 +36,29 @@ namespace eladadElrakamy
             maintoolstrip.Visible = false;
             toolStripButton1.Visible = false;
             loginPanel.Visible = true;
+            projectReportsPanel.Visible = false;
+            Refresh();
+        }
+
+        private void projectReportsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.projectReportsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.adadDatabaseDataSet1);
+
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'adadDatabaseDataSet1.projectReports' table. You can move, or remove it, as needed.
+            this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
+
+        }
+
+        private void projectReportsMenuItem_Click(object sender, EventArgs e)
+        {
+            projectReportsPanel.Visible = true;
+            Refresh();
         }
     }
 }

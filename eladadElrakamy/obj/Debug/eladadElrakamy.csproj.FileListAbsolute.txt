@@ -7,3 +7,6 @@ D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.csproj.Genera
 D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.csproj.CoreCompileInputs.cache
 D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.exe
 D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.pdb
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\adadDatabase.mdf
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\adadDatabase_log.ldf
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.csprojResolveAssemblyReference.cache
