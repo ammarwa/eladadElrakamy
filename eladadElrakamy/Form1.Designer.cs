@@ -208,32 +208,32 @@
             // projectReportsMenuItem
             // 
             this.projectReportsMenuItem.Name = "projectReportsMenuItem";
-            this.projectReportsMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.projectReportsMenuItem.Size = new System.Drawing.Size(357, 46);
             this.projectReportsMenuItem.Text = "تقارير مشاريع";
             this.projectReportsMenuItem.Click += new System.EventHandler(this.projectReportsMenuItem_Click);
             // 
             // تقاريرالمخزونToolStripMenuItem
             // 
             this.تقاريرالمخزونToolStripMenuItem.Name = "تقاريرالمخزونToolStripMenuItem";
-            this.تقاريرالمخزونToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.تقاريرالمخزونToolStripMenuItem.Size = new System.Drawing.Size(357, 46);
             this.تقاريرالمخزونToolStripMenuItem.Text = "تقارير المخزون";
             // 
             // المخزونToolStripMenuItem
             // 
             this.المخزونToolStripMenuItem.Name = "المخزونToolStripMenuItem";
-            this.المخزونToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.المخزونToolStripMenuItem.Size = new System.Drawing.Size(357, 46);
             this.المخزونToolStripMenuItem.Text = "المخزون";
             // 
             // المصروفاتالعامةToolStripMenuItem
             // 
             this.المصروفاتالعامةToolStripMenuItem.Name = "المصروفاتالعامةToolStripMenuItem";
-            this.المصروفاتالعامةToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.المصروفاتالعامةToolStripMenuItem.Size = new System.Drawing.Size(357, 46);
             this.المصروفاتالعامةToolStripMenuItem.Text = "المصروفات العامة";
             // 
             // شؤونالموظفينToolStripMenuItem
             // 
             this.شؤونالموظفينToolStripMenuItem.Name = "شؤونالموظفينToolStripMenuItem";
-            this.شؤونالموظفينToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.شؤونالموظفينToolStripMenuItem.Size = new System.Drawing.Size(357, 46);
             this.شؤونالموظفينToolStripMenuItem.Text = "شؤون الموظفين";
             // 
             // التقاريرالشاملةToolStripMenuItem
@@ -244,7 +244,7 @@
             this.تقاريرالضريبةToolStripMenuItem,
             this.تقاريرالمخزونToolStripMenuItem1});
             this.التقاريرالشاملةToolStripMenuItem.Name = "التقاريرالشاملةToolStripMenuItem";
-            this.التقاريرالشاملةToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.التقاريرالشاملةToolStripMenuItem.Size = new System.Drawing.Size(357, 46);
             this.التقاريرالشاملةToolStripMenuItem.Text = "التقارير الشاملة";
             // 
             // تقاريرالايراداتToolStripMenuItem
@@ -554,13 +554,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(44, 44);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(44, 45);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(87, 44);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(87, 45);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -570,7 +570,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(44, 44);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(44, 45);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -579,7 +579,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(44, 44);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(44, 45);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -588,13 +588,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(44, 44);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(44, 45);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 47);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 48);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -608,7 +608,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 47);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 48);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -616,7 +616,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(44, 44);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(44, 45);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -625,20 +625,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(44, 44);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(44, 45);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 47);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 48);
             // 
             // projectReportsBindingNavigatorSaveItem
             // 
             this.projectReportsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.projectReportsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("projectReportsBindingNavigatorSaveItem.Image")));
             this.projectReportsBindingNavigatorSaveItem.Name = "projectReportsBindingNavigatorSaveItem";
-            this.projectReportsBindingNavigatorSaveItem.Size = new System.Drawing.Size(44, 44);
+            this.projectReportsBindingNavigatorSaveItem.Size = new System.Drawing.Size(44, 45);
             this.projectReportsBindingNavigatorSaveItem.Text = "Save Data";
             this.projectReportsBindingNavigatorSaveItem.Click += new System.EventHandler(this.projectReportsBindingNavigatorSaveItem_Click);
             // 
@@ -689,9 +689,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2160, 936);
-            this.Controls.Add(this.projectReportsBindingNavigator);
             this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.projectReportsBindingNavigator);
             this.Name = "Home";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
