@@ -24,6 +24,8 @@ namespace eladadElrakamy
                 if(textBox2.Text == "admin")
                 {
                     maintoolstrip.Visible = true;
+                    loginPanel.Visible = false;
+                    toolStripButton1.Visible = true;
                 }
             }
         }
@@ -32,6 +34,7 @@ namespace eladadElrakamy
         {
             maintoolstrip.Visible = false;
             toolStripButton1.Visible = false;
+            loginPanel.Visible = true;
         }
     }
 }

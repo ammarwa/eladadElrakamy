@@ -43,7 +43,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.loginPanel = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
+            this.loginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -54,7 +56,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(2160, 48);
+            this.toolStrip1.Size = new System.Drawing.Size(2160, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -113,7 +115,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(616, 614);
+            this.button1.Location = new System.Drawing.Point(1157, 529);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(350, 73);
             this.button1.TabIndex = 1;
@@ -124,7 +126,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(650, 345);
+            this.label1.Location = new System.Drawing.Point(1347, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 32);
             this.label1.TabIndex = 2;
@@ -133,7 +135,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(650, 452);
+            this.label2.Location = new System.Drawing.Point(1381, 365);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 32);
             this.label2.TabIndex = 3;
@@ -141,7 +143,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(689, 394);
+            this.textBox1.Location = new System.Drawing.Point(1222, 297);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(237, 38);
@@ -149,7 +151,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(689, 511);
+            this.textBox2.Location = new System.Drawing.Point(1222, 423);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -167,16 +169,25 @@
             this.toolStripButton1.Visible = false;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // loginPanel
+            // 
+            this.loginPanel.Controls.Add(this.textBox1);
+            this.loginPanel.Controls.Add(this.textBox2);
+            this.loginPanel.Controls.Add(this.button1);
+            this.loginPanel.Controls.Add(this.label1);
+            this.loginPanel.Controls.Add(this.label2);
+            this.loginPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginPanel.Location = new System.Drawing.Point(0, 25);
+            this.loginPanel.Name = "loginPanel";
+            this.loginPanel.Size = new System.Drawing.Size(2160, 911);
+            this.loginPanel.TabIndex = 6;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2160, 936);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Home";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -184,6 +195,8 @@
             this.Text = "العداد الرقمي";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.loginPanel.ResumeLayout(false);
+            this.loginPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +218,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Panel loginPanel;
     }
 }
 
