@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PagedList;
+using System.Data.SqlClient;
 
 namespace eladadElrakamy
 {
     public partial class Home : Form
     {
+      //  DataSet ds = new DataSet);
+      //  SqlConnection sc = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\medu_\\OneDrive\\Documents\\GitHub\\eladadElrakamy\\eladadElrakamy\\adadDatabase.mdf;Integrated Security=True");
+     //   SqlDataAdapter da = new SqlDataAdapter();
+
         public Home()
         {
             InitializeComponent();
@@ -33,19 +39,29 @@ namespace eladadElrakamy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Users WHERE username='"+textBox1.Text+"' AND password='"+textBox2.Text+"'";
-            if (textBox1.Text == "admin")
-            {
-                if(textBox2.Text == "admin")
-                {
-                    HideAllPanels();
-                    maintoolstrip.Visible = true;
-                    toolStripButton1.Visible = true;
-                    homePanel.Visible = true;
-                    projectReportsBindingNavigator.Visible = false;
-                    homePanel.BringToFront();
-                }
-            }
+
+            //string id = "SELECT id FROM Users WHERE username='" + textBox1.Text + "' AND password='" + textBox2.Text + "'";
+            string username = "SELECT * FROM Users WHERE username='" + textBox1.Text + "'";
+            string password = "SELECT password FROM Users WHERE username='" + username + "'";
+            string type = "SELECT type FROM Users WHERE username='" + username + "'";
+
+           /* if (type.Equals("0")
+                type = "admin";
+            else
+                type = "user";*/
+            string query = "SELECT * FROM Users WHERE username='" + textBox1.Text + "' AND password='" + textBox2.Text + "'";
+            if (textBox1.Text == username)
+             {
+                 if(textBox2.Text == password)
+                 {
+                     HideAllPanels();
+                     maintoolstrip.Visible = true;
+                     toolStripButton1.Visible = true;
+                     homePanel.Visible = true;
+                     projectReportsBindingNavigator.Visible = false;
+                     homePanel.BringToFront();
+                 }
+             }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
