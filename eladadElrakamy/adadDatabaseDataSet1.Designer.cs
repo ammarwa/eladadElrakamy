@@ -815,6 +815,8 @@ namespace eladadElrakamy {
             
             private global::System.Data.DataColumn columnnotes;
             
+            private global::System.Data.DataColumn columnid;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public inventoryReportsDataTable() {
@@ -914,6 +916,14 @@ namespace eladadElrakamy {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -949,7 +959,7 @@ namespace eladadElrakamy {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public inventoryReportsRow AddinventoryReportsRow(int invID, string qty, string price, string discount, string VAT, string total, string sentto, string notes) {
+            public inventoryReportsRow AddinventoryReportsRow(int invID, string qty, string price, string discount, string VAT, string total, string sentto, string notes, int id) {
                 inventoryReportsRow rowinventoryReportsRow = ((inventoryReportsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         invID,
@@ -959,7 +969,8 @@ namespace eladadElrakamy {
                         VAT,
                         total,
                         sentto,
-                        notes};
+                        notes,
+                        id};
                 rowinventoryReportsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowinventoryReportsRow);
                 return rowinventoryReportsRow;
@@ -990,6 +1001,7 @@ namespace eladadElrakamy {
                 this.columntotal = base.Columns["total"];
                 this.columnsentto = base.Columns["sentto"];
                 this.columnnotes = base.Columns["notes"];
+                this.columnid = base.Columns["id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1011,6 +1023,8 @@ namespace eladadElrakamy {
                 base.Columns.Add(this.columnsentto);
                 this.columnnotes = new global::System.Data.DataColumn("notes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnotes);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columninvID.AllowDBNull = false;
                 this.columnqty.AllowDBNull = false;
                 this.columnqty.MaxLength = 50;
@@ -2906,6 +2920,22 @@ namespace eladadElrakamy {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int id {
+                get {
+                    try {
+                        return ((int)(this[this.tableinventoryReports.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'inventoryReports\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableinventoryReports.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IssenttoNull() {
                 return this.IsNull(this.tableinventoryReports.senttoColumn);
             }
@@ -2926,6 +2956,18 @@ namespace eladadElrakamy {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetnotesNull() {
                 this[this.tableinventoryReports.notesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsidNull() {
+                return this.IsNull(this.tableinventoryReports.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetidNull() {
+                this[this.tableinventoryReports.idColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3997,12 +4039,13 @@ namespace eladadElrakamy.adadDatabaseDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("total", "total");
             tableMapping.ColumnMappings.Add("sentto", "sentto");
             tableMapping.ColumnMappings.Add("notes", "notes");
+            tableMapping.ColumnMappings.Add("id", "id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[inventoryReports] ([invID], [qty], [price], [discount], [VAT]," +
-                " [total], [sentto], [notes]) VALUES (@invID, @qty, @price, @discount, @VAT, @tot" +
-                "al, @sentto, @notes)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [inventoryReports] ([invID], [qty], [price], [discount], [VAT], [tota" +
+                "l], [sentto], [notes], [id]) VALUES (@invID, @qty, @price, @discount, @VAT, @tot" +
+                "al, @sentto, @notes, @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@invID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "invID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@qty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4012,6 +4055,7 @@ namespace eladadElrakamy.adadDatabaseDataSet1TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sentto", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sentto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@notes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4027,7 +4071,7 @@ namespace eladadElrakamy.adadDatabaseDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT invID, qty, price, discount, VAT, total, sentto, notes FROM dbo.inventoryR" +
+            this._commandCollection[0].CommandText = "SELECT invID, qty, price, discount, VAT, total, sentto, notes, id FROM inventoryR" +
                 "eports";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -4089,7 +4133,7 @@ namespace eladadElrakamy.adadDatabaseDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int invID, string qty, string price, string discount, string VAT, string total, string sentto, string notes) {
+        public virtual int Insert(int invID, string qty, string price, string discount, string VAT, string total, string sentto, string notes, global::System.Nullable<int> id) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(invID));
             if ((qty == null)) {
                 throw new global::System.ArgumentNullException("qty");
@@ -4132,6 +4176,12 @@ namespace eladadElrakamy.adadDatabaseDataSet1TableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(notes));
+            }
+            if ((id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

@@ -53,11 +53,10 @@ namespace eladadElrakamy
             HideAllPanels();
             maintoolstrip.Visible = false;
             toolStripButton1.Visible = false;
-            toolStripContainer1.Visible = false;
-            toolStripContainer2.Visible = false;
+            //toolStripContainer1.Visible = false;
+            //toolStripContainer2.Visible = false;
             projectReportsBindingNavigator.Visible = false;
             loginPanel.Visible = true;
-            Refresh();
         }
 
         private void projectReportsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
