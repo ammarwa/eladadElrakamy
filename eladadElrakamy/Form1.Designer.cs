@@ -57,6 +57,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.loginPanel = new System.Windows.Forms.Panel();
             this.projectReportsPanel = new System.Windows.Forms.Panel();
+            this.homePanel = new System.Windows.Forms.Panel();
             this.projectReportsDataGridView = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,15 +68,6 @@
             this.senttoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.projectReportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adadDatabaseDataSet1 = new eladadElrakamy.adadDatabaseDataSet1();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.valueTextBox = new System.Windows.Forms.TextBox();
-            this.vATTextBox = new System.Windows.Forms.TextBox();
-            this.totalTextBox = new System.Windows.Forms.TextBox();
-            this.spentTextBox = new System.Windows.Forms.TextBox();
-            this.senttoTextBox = new System.Windows.Forms.TextBox();
-            this.projectReportsTableAdapter = new eladadElrakamy.adadDatabaseDataSet1TableAdapters.projectReportsTableAdapter();
-            this.tableAdapterManager = new eladadElrakamy.adadDatabaseDataSet1TableAdapters.TableAdapterManager();
             this.projectReportsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -89,6 +81,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.projectReportsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.valueTextBox = new System.Windows.Forms.TextBox();
+            this.vATTextBox = new System.Windows.Forms.TextBox();
+            this.totalTextBox = new System.Windows.Forms.TextBox();
+            this.spentTextBox = new System.Windows.Forms.TextBox();
+            this.senttoTextBox = new System.Windows.Forms.TextBox();
+            this.projectReportsTableAdapter = new eladadElrakamy.adadDatabaseDataSet1TableAdapters.projectReportsTableAdapter();
+            this.tableAdapterManager = new eladadElrakamy.adadDatabaseDataSet1TableAdapters.TableAdapterManager();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -284,17 +285,22 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(1157, 529);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(350, 73);
             this.button1.TabIndex = 1;
             this.button1.Text = "دخول";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(1347, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 32);
@@ -303,7 +309,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(1381, 365);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 32);
@@ -312,6 +320,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(1222, 297);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -320,6 +329,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(1222, 423);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -329,6 +339,8 @@
             // 
             // loginPanel
             // 
+            this.loginPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("loginPanel.BackgroundImage")));
+            this.loginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.loginPanel.Controls.Add(this.projectReportsPanel);
             this.loginPanel.Controls.Add(this.textBox1);
             this.loginPanel.Controls.Add(this.textBox2);
@@ -344,6 +356,9 @@
             // projectReportsPanel
             // 
             this.projectReportsPanel.AutoScroll = true;
+            this.projectReportsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projectReportsPanel.BackgroundImage")));
+            this.projectReportsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.projectReportsPanel.Controls.Add(this.homePanel);
             this.projectReportsPanel.Controls.Add(this.projectReportsDataGridView);
             this.projectReportsPanel.Controls.Add(idLabel);
             this.projectReportsPanel.Controls.Add(this.idTextBox);
@@ -359,12 +374,24 @@
             this.projectReportsPanel.Controls.Add(this.spentTextBox);
             this.projectReportsPanel.Controls.Add(senttoLabel);
             this.projectReportsPanel.Controls.Add(this.senttoTextBox);
+            this.projectReportsPanel.Controls.Add(this.projectReportsBindingNavigator);
             this.projectReportsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectReportsPanel.Location = new System.Drawing.Point(0, 0);
             this.projectReportsPanel.Name = "projectReportsPanel";
             this.projectReportsPanel.Size = new System.Drawing.Size(2160, 911);
             this.projectReportsPanel.TabIndex = 6;
             this.projectReportsPanel.Visible = false;
+            // 
+            // homePanel
+            // 
+            this.homePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePanel.BackgroundImage")));
+            this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homePanel.Location = new System.Drawing.Point(0, 0);
+            this.homePanel.Name = "homePanel";
+            this.homePanel.Size = new System.Drawing.Size(2160, 911);
+            this.homePanel.TabIndex = 15;
+            this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
             // 
             // projectReportsDataGridView
             // 
@@ -444,78 +471,6 @@
             this.adadDatabaseDataSet1.DataSetName = "adadDatabaseDataSet1";
             this.adadDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "id", true));
-            this.idTextBox.Location = new System.Drawing.Point(1629, 140);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(292, 38);
-            this.idTextBox.TabIndex = 1;
-            // 
-            // descriptionTextBox
-            // 
-            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(1629, 184);
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(292, 38);
-            this.descriptionTextBox.TabIndex = 3;
-            // 
-            // valueTextBox
-            // 
-            this.valueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "value", true));
-            this.valueTextBox.Location = new System.Drawing.Point(1629, 228);
-            this.valueTextBox.Name = "valueTextBox";
-            this.valueTextBox.Size = new System.Drawing.Size(292, 38);
-            this.valueTextBox.TabIndex = 5;
-            // 
-            // vATTextBox
-            // 
-            this.vATTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "VAT", true));
-            this.vATTextBox.Location = new System.Drawing.Point(1629, 272);
-            this.vATTextBox.Name = "vATTextBox";
-            this.vATTextBox.Size = new System.Drawing.Size(292, 38);
-            this.vATTextBox.TabIndex = 7;
-            // 
-            // totalTextBox
-            // 
-            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "total", true));
-            this.totalTextBox.Location = new System.Drawing.Point(1629, 316);
-            this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(292, 38);
-            this.totalTextBox.TabIndex = 9;
-            // 
-            // spentTextBox
-            // 
-            this.spentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "spent", true));
-            this.spentTextBox.Location = new System.Drawing.Point(1629, 360);
-            this.spentTextBox.Name = "spentTextBox";
-            this.spentTextBox.Size = new System.Drawing.Size(292, 38);
-            this.spentTextBox.TabIndex = 11;
-            // 
-            // senttoTextBox
-            // 
-            this.senttoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "sentto", true));
-            this.senttoTextBox.Location = new System.Drawing.Point(1629, 404);
-            this.senttoTextBox.Name = "senttoTextBox";
-            this.senttoTextBox.Size = new System.Drawing.Size(292, 38);
-            this.senttoTextBox.TabIndex = 13;
-            // 
-            // projectReportsTableAdapter
-            // 
-            this.projectReportsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.inventoryReportsTableAdapter = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.optionalTableAdapter = null;
-            this.tableAdapterManager.projectReportsTableAdapter = this.projectReportsTableAdapter;
-            this.tableAdapterManager.spentReportTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = eladadElrakamy.adadDatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsersTableAdapter = null;
-            this.tableAdapterManager.WorkersTableAdapter = null;
-            // 
             // projectReportsBindingNavigator
             // 
             this.projectReportsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -536,7 +491,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.projectReportsBindingNavigatorSaveItem});
-            this.projectReportsBindingNavigator.Location = new System.Drawing.Point(0, 25);
+            this.projectReportsBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.projectReportsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.projectReportsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.projectReportsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -642,6 +597,78 @@
             this.projectReportsBindingNavigatorSaveItem.Text = "Save Data";
             this.projectReportsBindingNavigatorSaveItem.Click += new System.EventHandler(this.projectReportsBindingNavigatorSaveItem_Click);
             // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "id", true));
+            this.idTextBox.Location = new System.Drawing.Point(1629, 140);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(292, 38);
+            this.idTextBox.TabIndex = 1;
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "description", true));
+            this.descriptionTextBox.Location = new System.Drawing.Point(1629, 184);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(292, 38);
+            this.descriptionTextBox.TabIndex = 3;
+            // 
+            // valueTextBox
+            // 
+            this.valueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "value", true));
+            this.valueTextBox.Location = new System.Drawing.Point(1629, 228);
+            this.valueTextBox.Name = "valueTextBox";
+            this.valueTextBox.Size = new System.Drawing.Size(292, 38);
+            this.valueTextBox.TabIndex = 5;
+            // 
+            // vATTextBox
+            // 
+            this.vATTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "VAT", true));
+            this.vATTextBox.Location = new System.Drawing.Point(1629, 272);
+            this.vATTextBox.Name = "vATTextBox";
+            this.vATTextBox.Size = new System.Drawing.Size(292, 38);
+            this.vATTextBox.TabIndex = 7;
+            // 
+            // totalTextBox
+            // 
+            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "total", true));
+            this.totalTextBox.Location = new System.Drawing.Point(1629, 316);
+            this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.Size = new System.Drawing.Size(292, 38);
+            this.totalTextBox.TabIndex = 9;
+            // 
+            // spentTextBox
+            // 
+            this.spentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "spent", true));
+            this.spentTextBox.Location = new System.Drawing.Point(1629, 360);
+            this.spentTextBox.Name = "spentTextBox";
+            this.spentTextBox.Size = new System.Drawing.Size(292, 38);
+            this.spentTextBox.TabIndex = 11;
+            // 
+            // senttoTextBox
+            // 
+            this.senttoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "sentto", true));
+            this.senttoTextBox.Location = new System.Drawing.Point(1629, 404);
+            this.senttoTextBox.Name = "senttoTextBox";
+            this.senttoTextBox.Size = new System.Drawing.Size(292, 38);
+            this.senttoTextBox.TabIndex = 13;
+            // 
+            // projectReportsTableAdapter
+            // 
+            this.projectReportsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.inventoryReportsTableAdapter = null;
+            this.tableAdapterManager.InventoryTableAdapter = null;
+            this.tableAdapterManager.optionalTableAdapter = null;
+            this.tableAdapterManager.projectReportsTableAdapter = this.projectReportsTableAdapter;
+            this.tableAdapterManager.spentReportTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = eladadElrakamy.adadDatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = null;
+            this.tableAdapterManager.WorkersTableAdapter = null;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -688,10 +715,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2160, 936);
             this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.projectReportsBindingNavigator);
             this.Name = "Home";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -775,6 +803,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Panel homePanel;
     }
 }
 

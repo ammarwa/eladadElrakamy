@@ -94,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="adadDatabaseDataSet.xsc">
       <DependentUpon>adadDatabaseDataSet.xsd</DependentUpon>
@@ -149,6 +150,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>adadDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="background.jpg" />
+    <Content Include="Properties\background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">

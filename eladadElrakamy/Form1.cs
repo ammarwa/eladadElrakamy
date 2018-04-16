@@ -15,6 +15,7 @@ namespace eladadElrakamy
         public Home()
         {
             InitializeComponent();
+            this.BackgroundImage = Properties.Resources.background;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,6 +60,11 @@ namespace eladadElrakamy
         {
             projectReportsPanel.Visible = true;
             Refresh();
+        }
+
+        private void homePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
