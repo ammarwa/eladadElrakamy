@@ -15,7 +15,17 @@ namespace eladadElrakamy
         public Home()
         {
             InitializeComponent();
+            homePanel.Location = loginPanel.Location;
+            projectReportsPanel.Location = loginPanel.Location;
             this.BackgroundImage = Properties.Resources.background;
+        }
+
+        public void HideAllPanels()
+        {
+            loginPanel.Visible = false;
+            homePanel.Visible = false;
+            projectReportsPanel.Visible = false;
+            InventoryReportsPanel.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,19 +35,22 @@ namespace eladadElrakamy
             {
                 if(textBox2.Text == "admin")
                 {
+                    HideAllPanels();
                     maintoolstrip.Visible = true;
-                    loginPanel.Visible = false;
                     toolStripButton1.Visible = true;
+                    homePanel.Visible = true;
+                    projectReportsBindingNavigator.Visible = true;
+                    homePanel.BringToFront();
                 }
             }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            HideAllPanels();
             maintoolstrip.Visible = false;
             toolStripButton1.Visible = false;
             loginPanel.Visible = true;
-            projectReportsPanel.Visible = false;
             Refresh();
         }
 
@@ -51,6 +64,8 @@ namespace eladadElrakamy
 
         private void Home_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'adadDatabaseDataSet1.inventoryReports' table. You can move, or remove it, as needed.
+            this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
             // TODO: This line of code loads data into the 'adadDatabaseDataSet1.projectReports' table. You can move, or remove it, as needed.
             this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
 
@@ -58,13 +73,24 @@ namespace eladadElrakamy
 
         private void projectReportsMenuItem_Click(object sender, EventArgs e)
         {
+            HideAllPanels();
             projectReportsPanel.Visible = true;
+            projectReportsPanel.BringToFront();
             Refresh();
         }
 
         private void homePanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void تقاريرالمخزونToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            maintoolstrip.Visible = true;
+            toolStripButton1.Visible = true;
+            InventoryReportsPanel.Visible = true;
+            inventoryReportsDataGridView.
         }
     }
 }
