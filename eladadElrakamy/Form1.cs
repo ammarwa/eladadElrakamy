@@ -26,6 +26,9 @@ namespace eladadElrakamy
             homePanel.Visible = false;
             projectReportsPanel.Visible = false;
             InventoryReportsPanel.Visible = false;
+            InventoryPanel.Visible = false;
+            SpentReportPanel.Visible = false;
+            WorkersPanel.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace eladadElrakamy
                     maintoolstrip.Visible = true;
                     toolStripButton1.Visible = true;
                     homePanel.Visible = true;
-                    projectReportsBindingNavigator.Visible = true;
+                    projectReportsBindingNavigator.Visible = false;
                     homePanel.BringToFront();
                 }
             }
@@ -50,6 +53,9 @@ namespace eladadElrakamy
             HideAllPanels();
             maintoolstrip.Visible = false;
             toolStripButton1.Visible = false;
+            toolStripContainer1.Visible = false;
+            toolStripContainer2.Visible = false;
+            projectReportsBindingNavigator.Visible = false;
             loginPanel.Visible = true;
             Refresh();
         }
@@ -64,6 +70,12 @@ namespace eladadElrakamy
 
         private void Home_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'adadDatabaseDataSet1.Workers' table. You can move, or remove it, as needed.
+            this.workersTableAdapter.Fill(this.adadDatabaseDataSet1.Workers);
+            // TODO: This line of code loads data into the 'adadDatabaseDataSet1.spentReport' table. You can move, or remove it, as needed.
+            this.spentReportTableAdapter.Fill(this.adadDatabaseDataSet1.spentReport);
+            // TODO: This line of code loads data into the 'adadDatabaseDataSet1.Inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter.Fill(this.adadDatabaseDataSet1.Inventory);
             // TODO: This line of code loads data into the 'adadDatabaseDataSet1.inventoryReports' table. You can move, or remove it, as needed.
             this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
             // TODO: This line of code loads data into the 'adadDatabaseDataSet1.projectReports' table. You can move, or remove it, as needed.
@@ -75,6 +87,7 @@ namespace eladadElrakamy
         {
             HideAllPanels();
             projectReportsPanel.Visible = true;
+            projectReportsBindingNavigator.Visible = false;
             projectReportsPanel.BringToFront();
             Refresh();
         }
@@ -89,8 +102,31 @@ namespace eladadElrakamy
             HideAllPanels();
             maintoolstrip.Visible = true;
             toolStripButton1.Visible = true;
+            projectReportsBindingNavigator.Visible = false;
             InventoryReportsPanel.Visible = true;
-            inventoryReportsDataGridView.
+        }
+
+        private void splitContainer3_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void المخزونToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            InventoryPanel.Visible = true;
+        }
+
+        private void المصروفاتالعامةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            SpentReportPanel.Visible = true;
+        }
+
+        private void شؤونالموظفينToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            WorkersPanel.Visible = true;
         }
     }
 }
