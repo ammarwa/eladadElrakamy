@@ -69,5 +69,15 @@ namespace eladadElrakamy.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] reportVAT {
+            get {
+                object obj = ResourceManager.GetObject("reportVAT", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

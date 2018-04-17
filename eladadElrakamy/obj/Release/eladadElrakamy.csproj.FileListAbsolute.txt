@@ -12,3 +12,4 @@ D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.csproj.Core
 D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.csproj.CopyComplete
 D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.exe
 D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.pdb
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.csprojResolveAssemblyReference.cache

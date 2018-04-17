@@ -36,7 +36,6 @@
             System.Windows.Forms.Label totalLabel;
             System.Windows.Forms.Label spentLabel;
             System.Windows.Forms.Label senttoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             System.Windows.Forms.Label invIDLabel;
             System.Windows.Forms.Label qtyLabel;
             System.Windows.Forms.Label priceLabel;
@@ -63,6 +62,9 @@
             System.Windows.Forms.Label allowancesLabel;
             System.Windows.Forms.Label totalLabel3;
             System.Windows.Forms.Label idLabel4;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.Windows.Forms.Label deductLabel;
+            System.Windows.Forms.Label valueLabel1;
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.maintoolstrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.projectReportsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,11 +73,10 @@
             this.المصروفاتالعامةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.شؤونالموظفينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.التقاريرالشاملةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقاريرالايراداتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقاريرالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقاريرالضريبةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقاريرالمخزونToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,8 +84,16 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.loginPanel = new System.Windows.Forms.Panel();
             this.projectReportsPanel = new System.Windows.Forms.Panel();
-            this.homePanel = new System.Windows.Forms.Panel();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.senttoTextBox = new System.Windows.Forms.TextBox();
+            this.spentTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.totalTextBox = new System.Windows.Forms.TextBox();
+            this.valueTextBox = new System.Windows.Forms.TextBox();
+            this.vATTextBox = new System.Windows.Forms.TextBox();
             this.projectReportsDataGridView = new System.Windows.Forms.DataGridView();
+            this.homePanel = new System.Windows.Forms.Panel();
             this.projectReportsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -98,13 +107,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.projectReportsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.valueTextBox = new System.Windows.Forms.TextBox();
-            this.vATTextBox = new System.Windows.Forms.TextBox();
-            this.totalTextBox = new System.Windows.Forms.TextBox();
-            this.spentTextBox = new System.Windows.Forms.TextBox();
-            this.senttoTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,35 +115,35 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InventoryReportsPanel = new System.Windows.Forms.Panel();
-            this.inventoryReportsDataGridView = new System.Windows.Forms.DataGridView();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.idTextBox4 = new System.Windows.Forms.TextBox();
             this.invIDTextBox = new System.Windows.Forms.TextBox();
-            this.qtyTextBox = new System.Windows.Forms.TextBox();
+            this.totalTextBox1 = new System.Windows.Forms.TextBox();
             this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.notesTextBox = new System.Windows.Forms.TextBox();
+            this.qtyTextBox = new System.Windows.Forms.TextBox();
             this.discountTextBox = new System.Windows.Forms.TextBox();
             this.vATTextBox1 = new System.Windows.Forms.TextBox();
-            this.totalTextBox1 = new System.Windows.Forms.TextBox();
             this.senttoTextBox1 = new System.Windows.Forms.TextBox();
-            this.notesTextBox = new System.Windows.Forms.TextBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.inventoryReportsDataGridView = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InventoryPanel = new System.Windows.Forms.Panel();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.inventoryDataGridView = new System.Windows.Forms.DataGridView();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.descriptionTextBox1 = new System.Windows.Forms.TextBox();
             this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.priceTextBox1 = new System.Windows.Forms.TextBox();
             this.notesTextBox1 = new System.Windows.Forms.TextBox();
+            this.inventoryDataGridView = new System.Windows.Forms.DataGridView();
             this.SpentReportPanel = new System.Windows.Forms.Panel();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.spentReportDataGridView = new System.Windows.Forms.DataGridView();
             this.idTextBox2 = new System.Windows.Forms.TextBox();
             this.descriptionTextBox2 = new System.Windows.Forms.TextBox();
             this.vATTextBox2 = new System.Windows.Forms.TextBox();
             this.totalTextBox2 = new System.Windows.Forms.TextBox();
+            this.spentReportDataGridView = new System.Windows.Forms.DataGridView();
             this.WorkersPanel = new System.Windows.Forms.Panel();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.workersDataGridView = new System.Windows.Forms.DataGridView();
             this.idTextBox3 = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nationalityTextBox = new System.Windows.Forms.TextBox();
@@ -150,14 +152,28 @@
             this.salaryTextBox = new System.Windows.Forms.TextBox();
             this.allowancesTextBox = new System.Windows.Forms.TextBox();
             this.totalTextBox3 = new System.Windows.Forms.TextBox();
+            this.workersDataGridView = new System.Windows.Forms.DataGridView();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
-            this.inventoryReportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.adadDatabaseDataSet1 = new eladadElrakamy.adadDatabaseDataSet1();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.deductTextBox = new System.Windows.Forms.TextBox();
+            this.deduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FinalReportsPanel = new System.Windows.Forms.Panel();
+            this.incomeGetBtn = new System.Windows.Forms.Button();
+            this.incomeLbl = new System.Windows.Forms.Label();
+            this.spentLbl = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.VATIN = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.restIncomeLbl = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.VATOut = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.RestVAT = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adadDatabaseDataSet1 = new eladadElrakamy.adadDatabaseDataSet1();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -166,18 +182,23 @@
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projectReportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryReportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spentReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.projectReportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -191,18 +212,12 @@
             this.inventoryTableAdapter = new eladadElrakamy.adadDatabaseDataSet1TableAdapters.InventoryTableAdapter();
             this.spentReportTableAdapter = new eladadElrakamy.adadDatabaseDataSet1TableAdapters.spentReportTableAdapter();
             this.workersTableAdapter = new eladadElrakamy.adadDatabaseDataSet1TableAdapters.WorkersTableAdapter();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTextBox4 = new System.Windows.Forms.TextBox();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valueTextBox1 = new System.Windows.Forms.TextBox();
             idLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             valueLabel = new System.Windows.Forms.Label();
@@ -236,22 +251,24 @@
             allowancesLabel = new System.Windows.Forms.Label();
             totalLabel3 = new System.Windows.Forms.Label();
             idLabel4 = new System.Windows.Forms.Label();
+            deductLabel = new System.Windows.Forms.Label();
+            valueLabel1 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.loginPanel.SuspendLayout();
             this.projectReportsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectReportsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectReportsBindingNavigator)).BeginInit();
-            this.projectReportsBindingNavigator.SuspendLayout();
-            this.InventoryReportsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryReportsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectReportsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectReportsBindingNavigator)).BeginInit();
+            this.projectReportsBindingNavigator.SuspendLayout();
+            this.InventoryReportsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryReportsDataGridView)).BeginInit();
             this.InventoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -275,12 +292,13 @@
             this.toolStripContainer2.ContentPanel.SuspendLayout();
             this.toolStripContainer2.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryReportsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adadDatabaseDataSet1)).BeginInit();
+            this.FinalReportsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adadDatabaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectReportsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryReportsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spentReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectReportsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -346,6 +364,240 @@
             senttoLabel.TabIndex = 12;
             senttoLabel.Text = "الملاحظات:";
             // 
+            // invIDLabel
+            // 
+            invIDLabel.AutoSize = true;
+            invIDLabel.Location = new System.Drawing.Point(300, 96);
+            invIDLabel.Name = "invIDLabel";
+            invIDLabel.Size = new System.Drawing.Size(143, 32);
+            invIDLabel.TabIndex = 1;
+            invIDLabel.Text = "كود المخزون:";
+            // 
+            // qtyLabel
+            // 
+            qtyLabel.AutoSize = true;
+            qtyLabel.Location = new System.Drawing.Point(300, 140);
+            qtyLabel.Name = "qtyLabel";
+            qtyLabel.Size = new System.Drawing.Size(76, 32);
+            qtyLabel.TabIndex = 3;
+            qtyLabel.Text = "الكمية:";
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new System.Drawing.Point(300, 184);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new System.Drawing.Size(78, 32);
+            priceLabel.TabIndex = 5;
+            priceLabel.Text = "السعر:";
+            // 
+            // discountLabel
+            // 
+            discountLabel.AutoSize = true;
+            discountLabel.Location = new System.Drawing.Point(300, 228);
+            discountLabel.Name = "discountLabel";
+            discountLabel.Size = new System.Drawing.Size(85, 32);
+            discountLabel.TabIndex = 7;
+            discountLabel.Text = "الخصم:";
+            // 
+            // vATLabel1
+            // 
+            vATLabel1.AutoSize = true;
+            vATLabel1.Location = new System.Drawing.Point(300, 272);
+            vATLabel1.Name = "vATLabel1";
+            vATLabel1.Size = new System.Drawing.Size(99, 32);
+            vATLabel1.TabIndex = 9;
+            vATLabel1.Text = "الضريبة:";
+            // 
+            // totalLabel1
+            // 
+            totalLabel1.AutoSize = true;
+            totalLabel1.Location = new System.Drawing.Point(300, 316);
+            totalLabel1.Name = "totalLabel1";
+            totalLabel1.Size = new System.Drawing.Size(101, 32);
+            totalLabel1.TabIndex = 11;
+            totalLabel1.Text = "الاجمالي:";
+            // 
+            // senttoLabel1
+            // 
+            senttoLabel1.AutoSize = true;
+            senttoLabel1.Location = new System.Drawing.Point(300, 360);
+            senttoLabel1.Name = "senttoLabel1";
+            senttoLabel1.Size = new System.Drawing.Size(116, 32);
+            senttoLabel1.TabIndex = 13;
+            senttoLabel1.Text = "مرسل الى:";
+            // 
+            // notesLabel
+            // 
+            notesLabel.AutoSize = true;
+            notesLabel.Location = new System.Drawing.Point(300, 404);
+            notesLabel.Name = "notesLabel";
+            notesLabel.Size = new System.Drawing.Size(109, 32);
+            notesLabel.TabIndex = 15;
+            notesLabel.Text = "ملاحظات:";
+            // 
+            // idLabel1
+            // 
+            idLabel1.AutoSize = true;
+            idLabel1.Location = new System.Drawing.Point(322, 83);
+            idLabel1.Name = "idLabel1";
+            idLabel1.Size = new System.Drawing.Size(69, 32);
+            idLabel1.TabIndex = 0;
+            idLabel1.Text = "الكود:";
+            // 
+            // descriptionLabel1
+            // 
+            descriptionLabel1.AutoSize = true;
+            descriptionLabel1.Location = new System.Drawing.Point(322, 127);
+            descriptionLabel1.Name = "descriptionLabel1";
+            descriptionLabel1.Size = new System.Drawing.Size(108, 32);
+            descriptionLabel1.TabIndex = 2;
+            descriptionLabel1.Text = "التوصيف:";
+            // 
+            // quantityLabel
+            // 
+            quantityLabel.AutoSize = true;
+            quantityLabel.Location = new System.Drawing.Point(322, 171);
+            quantityLabel.Name = "quantityLabel";
+            quantityLabel.Size = new System.Drawing.Size(76, 32);
+            quantityLabel.TabIndex = 4;
+            quantityLabel.Text = "الكمية:";
+            // 
+            // priceLabel1
+            // 
+            priceLabel1.AutoSize = true;
+            priceLabel1.Location = new System.Drawing.Point(322, 215);
+            priceLabel1.Name = "priceLabel1";
+            priceLabel1.Size = new System.Drawing.Size(78, 32);
+            priceLabel1.TabIndex = 6;
+            priceLabel1.Text = "السعر:";
+            // 
+            // notesLabel1
+            // 
+            notesLabel1.AutoSize = true;
+            notesLabel1.Location = new System.Drawing.Point(322, 259);
+            notesLabel1.Name = "notesLabel1";
+            notesLabel1.Size = new System.Drawing.Size(122, 32);
+            notesLabel1.TabIndex = 8;
+            notesLabel1.Text = "الملاحظات:";
+            // 
+            // idLabel2
+            // 
+            idLabel2.AutoSize = true;
+            idLabel2.Location = new System.Drawing.Point(277, 38);
+            idLabel2.Name = "idLabel2";
+            idLabel2.Size = new System.Drawing.Size(69, 32);
+            idLabel2.TabIndex = 0;
+            idLabel2.Text = "الكود:";
+            // 
+            // descriptionLabel2
+            // 
+            descriptionLabel2.AutoSize = true;
+            descriptionLabel2.Location = new System.Drawing.Point(277, 82);
+            descriptionLabel2.Name = "descriptionLabel2";
+            descriptionLabel2.Size = new System.Drawing.Size(108, 32);
+            descriptionLabel2.TabIndex = 2;
+            descriptionLabel2.Text = "التوصيف:";
+            // 
+            // vATLabel2
+            // 
+            vATLabel2.AutoSize = true;
+            vATLabel2.Location = new System.Drawing.Point(277, 126);
+            vATLabel2.Name = "vATLabel2";
+            vATLabel2.Size = new System.Drawing.Size(99, 32);
+            vATLabel2.TabIndex = 4;
+            vATLabel2.Text = "الضريبة:";
+            // 
+            // totalLabel2
+            // 
+            totalLabel2.AutoSize = true;
+            totalLabel2.Location = new System.Drawing.Point(277, 170);
+            totalLabel2.Name = "totalLabel2";
+            totalLabel2.Size = new System.Drawing.Size(101, 32);
+            totalLabel2.TabIndex = 6;
+            totalLabel2.Text = "الاجمالي:";
+            // 
+            // idLabel3
+            // 
+            idLabel3.AutoSize = true;
+            idLabel3.Location = new System.Drawing.Point(287, 17);
+            idLabel3.Name = "idLabel3";
+            idLabel3.Size = new System.Drawing.Size(69, 32);
+            idLabel3.TabIndex = 0;
+            idLabel3.Text = "الكود:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(287, 61);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(72, 32);
+            nameLabel.TabIndex = 2;
+            nameLabel.Text = "الاسم:";
+            // 
+            // nationalityLabel
+            // 
+            nationalityLabel.AutoSize = true;
+            nationalityLabel.Location = new System.Drawing.Point(287, 105);
+            nationalityLabel.Name = "nationalityLabel";
+            nationalityLabel.Size = new System.Drawing.Size(93, 32);
+            nationalityLabel.TabIndex = 4;
+            nationalityLabel.Text = "الجنسية:";
+            // 
+            // iqamaNoLabel
+            // 
+            iqamaNoLabel.AutoSize = true;
+            iqamaNoLabel.Location = new System.Drawing.Point(287, 149);
+            iqamaNoLabel.Name = "iqamaNoLabel";
+            iqamaNoLabel.Size = new System.Drawing.Size(121, 32);
+            iqamaNoLabel.TabIndex = 6;
+            iqamaNoLabel.Text = "رقم الاقامة:";
+            // 
+            // iqamaExpiryLabel
+            // 
+            iqamaExpiryLabel.AutoSize = true;
+            iqamaExpiryLabel.Location = new System.Drawing.Point(287, 193);
+            iqamaExpiryLabel.Name = "iqamaExpiryLabel";
+            iqamaExpiryLabel.Size = new System.Drawing.Size(197, 32);
+            iqamaExpiryLabel.TabIndex = 8;
+            iqamaExpiryLabel.Text = "تاريخ انتهاء الاقامة:";
+            // 
+            // salaryLabel
+            // 
+            salaryLabel.AutoSize = true;
+            salaryLabel.Location = new System.Drawing.Point(287, 237);
+            salaryLabel.Name = "salaryLabel";
+            salaryLabel.Size = new System.Drawing.Size(84, 32);
+            salaryLabel.TabIndex = 10;
+            salaryLabel.Text = "الراتب:";
+            // 
+            // allowancesLabel
+            // 
+            allowancesLabel.AutoSize = true;
+            allowancesLabel.Location = new System.Drawing.Point(287, 281);
+            allowancesLabel.Name = "allowancesLabel";
+            allowancesLabel.Size = new System.Drawing.Size(88, 32);
+            allowancesLabel.TabIndex = 12;
+            allowancesLabel.Text = "البدلات:";
+            // 
+            // totalLabel3
+            // 
+            totalLabel3.AutoSize = true;
+            totalLabel3.Location = new System.Drawing.Point(287, 325);
+            totalLabel3.Name = "totalLabel3";
+            totalLabel3.Size = new System.Drawing.Size(101, 32);
+            totalLabel3.TabIndex = 14;
+            totalLabel3.Text = "الاجمالي:";
+            // 
+            // idLabel4
+            // 
+            idLabel4.AutoSize = true;
+            idLabel4.Location = new System.Drawing.Point(300, 55);
+            idLabel4.Name = "idLabel4";
+            idLabel4.Size = new System.Drawing.Size(69, 32);
+            idLabel4.TabIndex = 18;
+            idLabel4.Text = "الكود:";
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -356,7 +608,7 @@
             this.printToolStripButton,
             this.toolStripSeparator,
             this.toolStripSeparator1});
-            this.toolStrip1.Location = new System.Drawing.Point(1920, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(1926, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(24, 25);
             this.toolStrip1.TabIndex = 0;
@@ -416,38 +668,10 @@
             // 
             // التقاريرالشاملةToolStripMenuItem
             // 
-            this.التقاريرالشاملةToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.تقاريرالايراداتToolStripMenuItem,
-            this.تقاريرالمصروفاتToolStripMenuItem,
-            this.تقاريرالضريبةToolStripMenuItem,
-            this.تقاريرالمخزونToolStripMenuItem1});
             this.التقاريرالشاملةToolStripMenuItem.Name = "التقاريرالشاملةToolStripMenuItem";
             this.التقاريرالشاملةToolStripMenuItem.Size = new System.Drawing.Size(357, 46);
             this.التقاريرالشاملةToolStripMenuItem.Text = "التقارير الشاملة";
-            // 
-            // تقاريرالايراداتToolStripMenuItem
-            // 
-            this.تقاريرالايراداتToolStripMenuItem.Name = "تقاريرالايراداتToolStripMenuItem";
-            this.تقاريرالايراداتToolStripMenuItem.Size = new System.Drawing.Size(352, 46);
-            this.تقاريرالايراداتToolStripMenuItem.Text = "تقارير الايرادات";
-            // 
-            // تقاريرالمصروفاتToolStripMenuItem
-            // 
-            this.تقاريرالمصروفاتToolStripMenuItem.Name = "تقاريرالمصروفاتToolStripMenuItem";
-            this.تقاريرالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(352, 46);
-            this.تقاريرالمصروفاتToolStripMenuItem.Text = "تقارير المصروفات";
-            // 
-            // تقاريرالضريبةToolStripMenuItem
-            // 
-            this.تقاريرالضريبةToolStripMenuItem.Name = "تقاريرالضريبةToolStripMenuItem";
-            this.تقاريرالضريبةToolStripMenuItem.Size = new System.Drawing.Size(352, 46);
-            this.تقاريرالضريبةToolStripMenuItem.Text = "تقارير الضريبة";
-            // 
-            // تقاريرالمخزونToolStripMenuItem1
-            // 
-            this.تقاريرالمخزونToolStripMenuItem1.Name = "تقاريرالمخزونToolStripMenuItem1";
-            this.تقاريرالمخزونToolStripMenuItem1.Size = new System.Drawing.Size(352, 46);
-            this.تقاريرالمخزونToolStripMenuItem1.Text = "تقارير المخزون";
+            this.التقاريرالشاملةToolStripMenuItem.Click += new System.EventHandler(this.التقاريرالشاملةToolStripMenuItem_Click);
             // 
             // toolStripButton1
             // 
@@ -459,6 +683,27 @@
             this.toolStripButton1.Text = "تسجيل خروج";
             this.toolStripButton1.Visible = false;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // printToolStripButton
+            // 
+            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
+            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripButton.Name = "printToolStripButton";
+            this.printToolStripButton.Size = new System.Drawing.Size(44, 44);
+            this.printToolStripButton.Text = "&Print";
+            this.printToolStripButton.Visible = false;
+            this.printToolStripButton.Click += new System.EventHandler(this.printToolStripButton_Click);
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // button1
             // 
@@ -542,17 +787,95 @@
             this.projectReportsPanel.TabIndex = 6;
             this.projectReportsPanel.Visible = false;
             // 
-            // homePanel
+            // splitContainer2
             // 
-            this.homePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePanel.BackgroundImage")));
-            this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homePanel.Location = new System.Drawing.Point(0, 0);
-            this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(2404, 911);
-            this.homePanel.TabIndex = 15;
-            this.homePanel.Visible = false;
-            this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.BackgroundImage = global::eladadElrakamy.Properties.Resources.background;
+            this.splitContainer2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer2.Panel1.Controls.Add(this.idTextBox);
+            this.splitContainer2.Panel1.Controls.Add(this.senttoTextBox);
+            this.splitContainer2.Panel1.Controls.Add(idLabel);
+            this.splitContainer2.Panel1.Controls.Add(senttoLabel);
+            this.splitContainer2.Panel1.Controls.Add(this.spentTextBox);
+            this.splitContainer2.Panel1.Controls.Add(descriptionLabel);
+            this.splitContainer2.Panel1.Controls.Add(spentLabel);
+            this.splitContainer2.Panel1.Controls.Add(this.descriptionTextBox);
+            this.splitContainer2.Panel1.Controls.Add(this.totalTextBox);
+            this.splitContainer2.Panel1.Controls.Add(valueLabel);
+            this.splitContainer2.Panel1.Controls.Add(totalLabel);
+            this.splitContainer2.Panel1.Controls.Add(this.valueTextBox);
+            this.splitContainer2.Panel1.Controls.Add(this.vATTextBox);
+            this.splitContainer2.Panel1.Controls.Add(vATLabel);
+            this.splitContainer2.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.projectReportsDataGridView);
+            this.splitContainer2.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.splitContainer2.Size = new System.Drawing.Size(2404, 911);
+            this.splitContainer2.SplitterDistance = 793;
+            this.splitContainer2.TabIndex = 16;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "id", true));
+            this.idTextBox.Location = new System.Drawing.Point(15, 58);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(292, 38);
+            this.idTextBox.TabIndex = 1;
+            // 
+            // senttoTextBox
+            // 
+            this.senttoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "sentto", true));
+            this.senttoTextBox.Location = new System.Drawing.Point(15, 322);
+            this.senttoTextBox.Name = "senttoTextBox";
+            this.senttoTextBox.Size = new System.Drawing.Size(292, 38);
+            this.senttoTextBox.TabIndex = 13;
+            // 
+            // spentTextBox
+            // 
+            this.spentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "spent", true));
+            this.spentTextBox.Location = new System.Drawing.Point(15, 278);
+            this.spentTextBox.Name = "spentTextBox";
+            this.spentTextBox.Size = new System.Drawing.Size(292, 38);
+            this.spentTextBox.TabIndex = 11;
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "description", true));
+            this.descriptionTextBox.Location = new System.Drawing.Point(15, 102);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(292, 38);
+            this.descriptionTextBox.TabIndex = 3;
+            // 
+            // totalTextBox
+            // 
+            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "total", true));
+            this.totalTextBox.Location = new System.Drawing.Point(15, 234);
+            this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.Size = new System.Drawing.Size(292, 38);
+            this.totalTextBox.TabIndex = 9;
+            // 
+            // valueTextBox
+            // 
+            this.valueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "value", true));
+            this.valueTextBox.Location = new System.Drawing.Point(15, 146);
+            this.valueTextBox.Name = "valueTextBox";
+            this.valueTextBox.Size = new System.Drawing.Size(292, 38);
+            this.valueTextBox.TabIndex = 5;
+            // 
+            // vATTextBox
+            // 
+            this.vATTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "VAT", true));
+            this.vATTextBox.Location = new System.Drawing.Point(15, 190);
+            this.vATTextBox.Name = "vATTextBox";
+            this.vATTextBox.Size = new System.Drawing.Size(292, 38);
+            this.vATTextBox.TabIndex = 7;
             // 
             // projectReportsDataGridView
             // 
@@ -573,6 +896,18 @@
             this.projectReportsDataGridView.Name = "projectReportsDataGridView";
             this.projectReportsDataGridView.Size = new System.Drawing.Size(1607, 911);
             this.projectReportsDataGridView.TabIndex = 14;
+            // 
+            // homePanel
+            // 
+            this.homePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePanel.BackgroundImage")));
+            this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homePanel.Location = new System.Drawing.Point(0, 0);
+            this.homePanel.Name = "homePanel";
+            this.homePanel.Size = new System.Drawing.Size(2404, 911);
+            this.homePanel.TabIndex = 15;
+            this.homePanel.Visible = false;
+            this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
             // 
             // projectReportsBindingNavigator
             // 
@@ -701,62 +1036,6 @@
             this.projectReportsBindingNavigatorSaveItem.Text = "Save Data";
             this.projectReportsBindingNavigatorSaveItem.Click += new System.EventHandler(this.projectReportsBindingNavigatorSaveItem_Click);
             // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "id", true));
-            this.idTextBox.Location = new System.Drawing.Point(15, 58);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(292, 38);
-            this.idTextBox.TabIndex = 1;
-            // 
-            // descriptionTextBox
-            // 
-            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(15, 102);
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(292, 38);
-            this.descriptionTextBox.TabIndex = 3;
-            // 
-            // valueTextBox
-            // 
-            this.valueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "value", true));
-            this.valueTextBox.Location = new System.Drawing.Point(15, 146);
-            this.valueTextBox.Name = "valueTextBox";
-            this.valueTextBox.Size = new System.Drawing.Size(292, 38);
-            this.valueTextBox.TabIndex = 5;
-            // 
-            // vATTextBox
-            // 
-            this.vATTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "VAT", true));
-            this.vATTextBox.Location = new System.Drawing.Point(15, 190);
-            this.vATTextBox.Name = "vATTextBox";
-            this.vATTextBox.Size = new System.Drawing.Size(292, 38);
-            this.vATTextBox.TabIndex = 7;
-            // 
-            // totalTextBox
-            // 
-            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "total", true));
-            this.totalTextBox.Location = new System.Drawing.Point(15, 234);
-            this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(292, 38);
-            this.totalTextBox.TabIndex = 9;
-            // 
-            // spentTextBox
-            // 
-            this.spentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "spent", true));
-            this.spentTextBox.Location = new System.Drawing.Point(15, 278);
-            this.spentTextBox.Name = "spentTextBox";
-            this.spentTextBox.Size = new System.Drawing.Size(292, 38);
-            this.spentTextBox.TabIndex = 11;
-            // 
-            // senttoTextBox
-            // 
-            this.senttoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectReportsBindingSource, "sentto", true));
-            this.senttoTextBox.Location = new System.Drawing.Point(15, 322);
-            this.senttoTextBox.Name = "senttoTextBox";
-            this.senttoTextBox.Size = new System.Drawing.Size(292, 38);
-            this.senttoTextBox.TabIndex = 13;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -811,165 +1090,6 @@
             this.InventoryReportsPanel.TabIndex = 16;
             this.InventoryReportsPanel.Visible = false;
             // 
-            // inventoryReportsDataGridView
-            // 
-            this.inventoryReportsDataGridView.AllowUserToOrderColumns = true;
-            this.inventoryReportsDataGridView.AutoGenerateColumns = false;
-            this.inventoryReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.inventoryReportsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15});
-            this.inventoryReportsDataGridView.DataSource = this.inventoryReportsBindingSource;
-            this.inventoryReportsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inventoryReportsDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.inventoryReportsDataGridView.Name = "inventoryReportsDataGridView";
-            this.inventoryReportsDataGridView.RowTemplate.Height = 40;
-            this.inventoryReportsDataGridView.Size = new System.Drawing.Size(1605, 911);
-            this.inventoryReportsDataGridView.TabIndex = 0;
-            // 
-            // invIDLabel
-            // 
-            invIDLabel.AutoSize = true;
-            invIDLabel.Location = new System.Drawing.Point(300, 96);
-            invIDLabel.Name = "invIDLabel";
-            invIDLabel.Size = new System.Drawing.Size(143, 32);
-            invIDLabel.TabIndex = 1;
-            invIDLabel.Text = "كود المخزون:";
-            // 
-            // invIDTextBox
-            // 
-            this.invIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "invID", true));
-            this.invIDTextBox.Location = new System.Drawing.Point(13, 96);
-            this.invIDTextBox.Name = "invIDTextBox";
-            this.invIDTextBox.Size = new System.Drawing.Size(257, 38);
-            this.invIDTextBox.TabIndex = 2;
-            // 
-            // qtyLabel
-            // 
-            qtyLabel.AutoSize = true;
-            qtyLabel.Location = new System.Drawing.Point(300, 140);
-            qtyLabel.Name = "qtyLabel";
-            qtyLabel.Size = new System.Drawing.Size(76, 32);
-            qtyLabel.TabIndex = 3;
-            qtyLabel.Text = "الكمية:";
-            // 
-            // qtyTextBox
-            // 
-            this.qtyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "qty", true));
-            this.qtyTextBox.Location = new System.Drawing.Point(13, 140);
-            this.qtyTextBox.Name = "qtyTextBox";
-            this.qtyTextBox.Size = new System.Drawing.Size(257, 38);
-            this.qtyTextBox.TabIndex = 4;
-            // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Location = new System.Drawing.Point(300, 184);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new System.Drawing.Size(78, 32);
-            priceLabel.TabIndex = 5;
-            priceLabel.Text = "السعر:";
-            // 
-            // priceTextBox
-            // 
-            this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "price", true));
-            this.priceTextBox.Location = new System.Drawing.Point(13, 184);
-            this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(257, 38);
-            this.priceTextBox.TabIndex = 6;
-            // 
-            // discountLabel
-            // 
-            discountLabel.AutoSize = true;
-            discountLabel.Location = new System.Drawing.Point(300, 228);
-            discountLabel.Name = "discountLabel";
-            discountLabel.Size = new System.Drawing.Size(85, 32);
-            discountLabel.TabIndex = 7;
-            discountLabel.Text = "الخصم:";
-            // 
-            // discountTextBox
-            // 
-            this.discountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "discount", true));
-            this.discountTextBox.Location = new System.Drawing.Point(13, 228);
-            this.discountTextBox.Name = "discountTextBox";
-            this.discountTextBox.Size = new System.Drawing.Size(257, 38);
-            this.discountTextBox.TabIndex = 8;
-            // 
-            // vATLabel1
-            // 
-            vATLabel1.AutoSize = true;
-            vATLabel1.Location = new System.Drawing.Point(300, 272);
-            vATLabel1.Name = "vATLabel1";
-            vATLabel1.Size = new System.Drawing.Size(99, 32);
-            vATLabel1.TabIndex = 9;
-            vATLabel1.Text = "الضريبة:";
-            // 
-            // vATTextBox1
-            // 
-            this.vATTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "VAT", true));
-            this.vATTextBox1.Location = new System.Drawing.Point(13, 272);
-            this.vATTextBox1.Name = "vATTextBox1";
-            this.vATTextBox1.Size = new System.Drawing.Size(257, 38);
-            this.vATTextBox1.TabIndex = 10;
-            // 
-            // totalLabel1
-            // 
-            totalLabel1.AutoSize = true;
-            totalLabel1.Location = new System.Drawing.Point(300, 316);
-            totalLabel1.Name = "totalLabel1";
-            totalLabel1.Size = new System.Drawing.Size(101, 32);
-            totalLabel1.TabIndex = 11;
-            totalLabel1.Text = "الاجمالي:";
-            // 
-            // totalTextBox1
-            // 
-            this.totalTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "total", true));
-            this.totalTextBox1.Location = new System.Drawing.Point(13, 316);
-            this.totalTextBox1.Name = "totalTextBox1";
-            this.totalTextBox1.Size = new System.Drawing.Size(257, 38);
-            this.totalTextBox1.TabIndex = 12;
-            // 
-            // senttoLabel1
-            // 
-            senttoLabel1.AutoSize = true;
-            senttoLabel1.Location = new System.Drawing.Point(300, 360);
-            senttoLabel1.Name = "senttoLabel1";
-            senttoLabel1.Size = new System.Drawing.Size(116, 32);
-            senttoLabel1.TabIndex = 13;
-            senttoLabel1.Text = "مرسل الى:";
-            // 
-            // senttoTextBox1
-            // 
-            this.senttoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "sentto", true));
-            this.senttoTextBox1.Location = new System.Drawing.Point(13, 360);
-            this.senttoTextBox1.Name = "senttoTextBox1";
-            this.senttoTextBox1.Size = new System.Drawing.Size(257, 38);
-            this.senttoTextBox1.TabIndex = 14;
-            // 
-            // notesLabel
-            // 
-            notesLabel.AutoSize = true;
-            notesLabel.Location = new System.Drawing.Point(300, 404);
-            notesLabel.Name = "notesLabel";
-            notesLabel.Size = new System.Drawing.Size(109, 32);
-            notesLabel.TabIndex = 15;
-            notesLabel.Text = "ملاحظات:";
-            // 
-            // notesTextBox
-            // 
-            this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "notes", true));
-            this.notesTextBox.Location = new System.Drawing.Point(13, 404);
-            this.notesTextBox.Name = "notesTextBox";
-            this.notesTextBox.Size = new System.Drawing.Size(257, 38);
-            this.notesTextBox.TabIndex = 16;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.BackgroundImage = global::eladadElrakamy.Properties.Resources.background;
@@ -1006,42 +1126,110 @@
             this.splitContainer1.Panel2.Controls.Add(this.inventoryReportsDataGridView);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.splitContainer1.Size = new System.Drawing.Size(2404, 911);
-            this.splitContainer1.SplitterDistance = 795;
+            this.splitContainer1.SplitterDistance = 794;
             this.splitContainer1.TabIndex = 17;
             // 
-            // splitContainer2
+            // idTextBox4
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
+            this.idTextBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "id", true));
+            this.idTextBox4.Location = new System.Drawing.Point(13, 52);
+            this.idTextBox4.Name = "idTextBox4";
+            this.idTextBox4.Size = new System.Drawing.Size(257, 38);
+            this.idTextBox4.TabIndex = 19;
             // 
-            // splitContainer2.Panel1
+            // invIDTextBox
             // 
-            this.splitContainer2.Panel1.BackgroundImage = global::eladadElrakamy.Properties.Resources.background;
-            this.splitContainer2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer2.Panel1.Controls.Add(this.idTextBox);
-            this.splitContainer2.Panel1.Controls.Add(this.senttoTextBox);
-            this.splitContainer2.Panel1.Controls.Add(idLabel);
-            this.splitContainer2.Panel1.Controls.Add(senttoLabel);
-            this.splitContainer2.Panel1.Controls.Add(this.spentTextBox);
-            this.splitContainer2.Panel1.Controls.Add(descriptionLabel);
-            this.splitContainer2.Panel1.Controls.Add(spentLabel);
-            this.splitContainer2.Panel1.Controls.Add(this.descriptionTextBox);
-            this.splitContainer2.Panel1.Controls.Add(this.totalTextBox);
-            this.splitContainer2.Panel1.Controls.Add(valueLabel);
-            this.splitContainer2.Panel1.Controls.Add(totalLabel);
-            this.splitContainer2.Panel1.Controls.Add(this.valueTextBox);
-            this.splitContainer2.Panel1.Controls.Add(this.vATTextBox);
-            this.splitContainer2.Panel1.Controls.Add(vATLabel);
-            this.splitContainer2.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.invIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "invID", true));
+            this.invIDTextBox.Location = new System.Drawing.Point(13, 96);
+            this.invIDTextBox.Name = "invIDTextBox";
+            this.invIDTextBox.Size = new System.Drawing.Size(257, 38);
+            this.invIDTextBox.TabIndex = 2;
             // 
-            // splitContainer2.Panel2
+            // totalTextBox1
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.projectReportsDataGridView);
-            this.splitContainer2.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer2.Size = new System.Drawing.Size(2404, 911);
-            this.splitContainer2.SplitterDistance = 793;
-            this.splitContainer2.TabIndex = 16;
+            this.totalTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "total", true));
+            this.totalTextBox1.Location = new System.Drawing.Point(13, 316);
+            this.totalTextBox1.Name = "totalTextBox1";
+            this.totalTextBox1.Size = new System.Drawing.Size(257, 38);
+            this.totalTextBox1.TabIndex = 12;
+            // 
+            // priceTextBox
+            // 
+            this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "price", true));
+            this.priceTextBox.Location = new System.Drawing.Point(13, 184);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(257, 38);
+            this.priceTextBox.TabIndex = 6;
+            // 
+            // notesTextBox
+            // 
+            this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "notes", true));
+            this.notesTextBox.Location = new System.Drawing.Point(13, 404);
+            this.notesTextBox.Name = "notesTextBox";
+            this.notesTextBox.Size = new System.Drawing.Size(257, 38);
+            this.notesTextBox.TabIndex = 16;
+            // 
+            // qtyTextBox
+            // 
+            this.qtyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "qty", true));
+            this.qtyTextBox.Location = new System.Drawing.Point(13, 140);
+            this.qtyTextBox.Name = "qtyTextBox";
+            this.qtyTextBox.Size = new System.Drawing.Size(257, 38);
+            this.qtyTextBox.TabIndex = 4;
+            // 
+            // discountTextBox
+            // 
+            this.discountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "discount", true));
+            this.discountTextBox.Location = new System.Drawing.Point(13, 228);
+            this.discountTextBox.Name = "discountTextBox";
+            this.discountTextBox.Size = new System.Drawing.Size(257, 38);
+            this.discountTextBox.TabIndex = 8;
+            // 
+            // vATTextBox1
+            // 
+            this.vATTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "VAT", true));
+            this.vATTextBox1.Location = new System.Drawing.Point(13, 272);
+            this.vATTextBox1.Name = "vATTextBox1";
+            this.vATTextBox1.Size = new System.Drawing.Size(257, 38);
+            this.vATTextBox1.TabIndex = 10;
+            // 
+            // senttoTextBox1
+            // 
+            this.senttoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "sentto", true));
+            this.senttoTextBox1.Location = new System.Drawing.Point(13, 360);
+            this.senttoTextBox1.Name = "senttoTextBox1";
+            this.senttoTextBox1.Size = new System.Drawing.Size(257, 38);
+            this.senttoTextBox1.TabIndex = 14;
+            // 
+            // inventoryReportsDataGridView
+            // 
+            this.inventoryReportsDataGridView.AllowUserToOrderColumns = true;
+            this.inventoryReportsDataGridView.AutoGenerateColumns = false;
+            this.inventoryReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.inventoryReportsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.inventoryReportsDataGridView.DataSource = this.inventoryReportsBindingSource;
+            this.inventoryReportsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inventoryReportsDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.inventoryReportsDataGridView.Name = "inventoryReportsDataGridView";
+            this.inventoryReportsDataGridView.RowTemplate.Height = 40;
+            this.inventoryReportsDataGridView.Size = new System.Drawing.Size(1606, 911);
+            this.inventoryReportsDataGridView.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "الكود";
+            this.id.Name = "id";
             // 
             // InventoryPanel
             // 
@@ -1086,6 +1274,46 @@
             this.splitContainer3.SplitterDistance = 796;
             this.splitContainer3.TabIndex = 0;
             // 
+            // idTextBox1
+            // 
+            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "id", true));
+            this.idTextBox1.Location = new System.Drawing.Point(17, 82);
+            this.idTextBox1.Name = "idTextBox1";
+            this.idTextBox1.Size = new System.Drawing.Size(284, 38);
+            this.idTextBox1.TabIndex = 1;
+            // 
+            // descriptionTextBox1
+            // 
+            this.descriptionTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "description", true));
+            this.descriptionTextBox1.Location = new System.Drawing.Point(17, 126);
+            this.descriptionTextBox1.Name = "descriptionTextBox1";
+            this.descriptionTextBox1.Size = new System.Drawing.Size(284, 38);
+            this.descriptionTextBox1.TabIndex = 3;
+            // 
+            // quantityTextBox
+            // 
+            this.quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "Quantity", true));
+            this.quantityTextBox.Location = new System.Drawing.Point(17, 170);
+            this.quantityTextBox.Name = "quantityTextBox";
+            this.quantityTextBox.Size = new System.Drawing.Size(284, 38);
+            this.quantityTextBox.TabIndex = 5;
+            // 
+            // priceTextBox1
+            // 
+            this.priceTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "price", true));
+            this.priceTextBox1.Location = new System.Drawing.Point(17, 214);
+            this.priceTextBox1.Name = "priceTextBox1";
+            this.priceTextBox1.Size = new System.Drawing.Size(284, 38);
+            this.priceTextBox1.TabIndex = 7;
+            // 
+            // notesTextBox1
+            // 
+            this.notesTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "notes", true));
+            this.notesTextBox1.Location = new System.Drawing.Point(17, 258);
+            this.notesTextBox1.Name = "notesTextBox1";
+            this.notesTextBox1.Size = new System.Drawing.Size(284, 38);
+            this.notesTextBox1.TabIndex = 9;
+            // 
             // inventoryDataGridView
             // 
             this.inventoryDataGridView.AllowUserToOrderColumns = true;
@@ -1104,91 +1332,6 @@
             this.inventoryDataGridView.RowTemplate.Height = 40;
             this.inventoryDataGridView.Size = new System.Drawing.Size(1604, 911);
             this.inventoryDataGridView.TabIndex = 0;
-            // 
-            // idLabel1
-            // 
-            idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(322, 83);
-            idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(69, 32);
-            idLabel1.TabIndex = 0;
-            idLabel1.Text = "الكود:";
-            // 
-            // idTextBox1
-            // 
-            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "id", true));
-            this.idTextBox1.Location = new System.Drawing.Point(17, 82);
-            this.idTextBox1.Name = "idTextBox1";
-            this.idTextBox1.Size = new System.Drawing.Size(284, 38);
-            this.idTextBox1.TabIndex = 1;
-            // 
-            // descriptionLabel1
-            // 
-            descriptionLabel1.AutoSize = true;
-            descriptionLabel1.Location = new System.Drawing.Point(322, 127);
-            descriptionLabel1.Name = "descriptionLabel1";
-            descriptionLabel1.Size = new System.Drawing.Size(108, 32);
-            descriptionLabel1.TabIndex = 2;
-            descriptionLabel1.Text = "التوصيف:";
-            // 
-            // descriptionTextBox1
-            // 
-            this.descriptionTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "description", true));
-            this.descriptionTextBox1.Location = new System.Drawing.Point(17, 126);
-            this.descriptionTextBox1.Name = "descriptionTextBox1";
-            this.descriptionTextBox1.Size = new System.Drawing.Size(284, 38);
-            this.descriptionTextBox1.TabIndex = 3;
-            // 
-            // quantityLabel
-            // 
-            quantityLabel.AutoSize = true;
-            quantityLabel.Location = new System.Drawing.Point(322, 171);
-            quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new System.Drawing.Size(76, 32);
-            quantityLabel.TabIndex = 4;
-            quantityLabel.Text = "الكمية:";
-            // 
-            // quantityTextBox
-            // 
-            this.quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "Quantity", true));
-            this.quantityTextBox.Location = new System.Drawing.Point(17, 170);
-            this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(284, 38);
-            this.quantityTextBox.TabIndex = 5;
-            // 
-            // priceLabel1
-            // 
-            priceLabel1.AutoSize = true;
-            priceLabel1.Location = new System.Drawing.Point(322, 215);
-            priceLabel1.Name = "priceLabel1";
-            priceLabel1.Size = new System.Drawing.Size(78, 32);
-            priceLabel1.TabIndex = 6;
-            priceLabel1.Text = "السعر:";
-            // 
-            // priceTextBox1
-            // 
-            this.priceTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "price", true));
-            this.priceTextBox1.Location = new System.Drawing.Point(17, 214);
-            this.priceTextBox1.Name = "priceTextBox1";
-            this.priceTextBox1.Size = new System.Drawing.Size(284, 38);
-            this.priceTextBox1.TabIndex = 7;
-            // 
-            // notesLabel1
-            // 
-            notesLabel1.AutoSize = true;
-            notesLabel1.Location = new System.Drawing.Point(322, 259);
-            notesLabel1.Name = "notesLabel1";
-            notesLabel1.Size = new System.Drawing.Size(122, 32);
-            notesLabel1.TabIndex = 8;
-            notesLabel1.Text = "الملاحظات:";
-            // 
-            // notesTextBox1
-            // 
-            this.notesTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "notes", true));
-            this.notesTextBox1.Location = new System.Drawing.Point(17, 258);
-            this.notesTextBox1.Name = "notesTextBox1";
-            this.notesTextBox1.Size = new System.Drawing.Size(284, 38);
-            this.notesTextBox1.TabIndex = 9;
             // 
             // SpentReportPanel
             // 
@@ -1212,6 +1355,8 @@
             // 
             this.splitContainer4.Panel1.BackgroundImage = global::eladadElrakamy.Properties.Resources.background;
             this.splitContainer4.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer4.Panel1.Controls.Add(valueLabel1);
+            this.splitContainer4.Panel1.Controls.Add(this.valueTextBox1);
             this.splitContainer4.Panel1.Controls.Add(idLabel2);
             this.splitContainer4.Panel1.Controls.Add(this.idTextBox2);
             this.splitContainer4.Panel1.Controls.Add(descriptionLabel2);
@@ -1230,33 +1375,6 @@
             this.splitContainer4.SplitterDistance = 797;
             this.splitContainer4.TabIndex = 0;
             // 
-            // spentReportDataGridView
-            // 
-            this.spentReportDataGridView.AllowUserToOrderColumns = true;
-            this.spentReportDataGridView.AutoGenerateColumns = false;
-            this.spentReportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.spentReportDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24});
-            this.spentReportDataGridView.DataSource = this.spentReportBindingSource;
-            this.spentReportDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spentReportDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.spentReportDataGridView.Name = "spentReportDataGridView";
-            this.spentReportDataGridView.RowTemplate.Height = 40;
-            this.spentReportDataGridView.Size = new System.Drawing.Size(1603, 911);
-            this.spentReportDataGridView.TabIndex = 0;
-            // 
-            // idLabel2
-            // 
-            idLabel2.AutoSize = true;
-            idLabel2.Location = new System.Drawing.Point(277, 38);
-            idLabel2.Name = "idLabel2";
-            idLabel2.Size = new System.Drawing.Size(69, 32);
-            idLabel2.TabIndex = 0;
-            idLabel2.Text = "الكود:";
-            // 
             // idTextBox2
             // 
             this.idTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.spentReportBindingSource, "id", true));
@@ -1264,15 +1382,6 @@
             this.idTextBox2.Name = "idTextBox2";
             this.idTextBox2.Size = new System.Drawing.Size(254, 38);
             this.idTextBox2.TabIndex = 1;
-            // 
-            // descriptionLabel2
-            // 
-            descriptionLabel2.AutoSize = true;
-            descriptionLabel2.Location = new System.Drawing.Point(277, 82);
-            descriptionLabel2.Name = "descriptionLabel2";
-            descriptionLabel2.Size = new System.Drawing.Size(108, 32);
-            descriptionLabel2.TabIndex = 2;
-            descriptionLabel2.Text = "التوصيف:";
             // 
             // descriptionTextBox2
             // 
@@ -1282,15 +1391,6 @@
             this.descriptionTextBox2.Size = new System.Drawing.Size(254, 38);
             this.descriptionTextBox2.TabIndex = 3;
             // 
-            // vATLabel2
-            // 
-            vATLabel2.AutoSize = true;
-            vATLabel2.Location = new System.Drawing.Point(277, 126);
-            vATLabel2.Name = "vATLabel2";
-            vATLabel2.Size = new System.Drawing.Size(99, 32);
-            vATLabel2.TabIndex = 4;
-            vATLabel2.Text = "الضريبة:";
-            // 
             // vATTextBox2
             // 
             this.vATTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.spentReportBindingSource, "VAT", true));
@@ -1299,15 +1399,6 @@
             this.vATTextBox2.Size = new System.Drawing.Size(254, 38);
             this.vATTextBox2.TabIndex = 5;
             // 
-            // totalLabel2
-            // 
-            totalLabel2.AutoSize = true;
-            totalLabel2.Location = new System.Drawing.Point(277, 170);
-            totalLabel2.Name = "totalLabel2";
-            totalLabel2.Size = new System.Drawing.Size(101, 32);
-            totalLabel2.TabIndex = 6;
-            totalLabel2.Text = "الاجمالي:";
-            // 
             // totalTextBox2
             // 
             this.totalTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.spentReportBindingSource, "total", true));
@@ -1315,6 +1406,25 @@
             this.totalTextBox2.Name = "totalTextBox2";
             this.totalTextBox2.Size = new System.Drawing.Size(254, 38);
             this.totalTextBox2.TabIndex = 7;
+            // 
+            // spentReportDataGridView
+            // 
+            this.spentReportDataGridView.AllowUserToOrderColumns = true;
+            this.spentReportDataGridView.AutoGenerateColumns = false;
+            this.spentReportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.spentReportDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.value,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24});
+            this.spentReportDataGridView.DataSource = this.spentReportBindingSource;
+            this.spentReportDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spentReportDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.spentReportDataGridView.Name = "spentReportDataGridView";
+            this.spentReportDataGridView.RowTemplate.Height = 40;
+            this.spentReportDataGridView.Size = new System.Drawing.Size(1603, 911);
+            this.spentReportDataGridView.TabIndex = 0;
             // 
             // WorkersPanel
             // 
@@ -1339,6 +1449,8 @@
             this.splitContainer5.Panel1.AutoScroll = true;
             this.splitContainer5.Panel1.BackgroundImage = global::eladadElrakamy.Properties.Resources.background;
             this.splitContainer5.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer5.Panel1.Controls.Add(deductLabel);
+            this.splitContainer5.Panel1.Controls.Add(this.deductTextBox);
             this.splitContainer5.Panel1.Controls.Add(idLabel3);
             this.splitContainer5.Panel1.Controls.Add(this.idTextBox3);
             this.splitContainer5.Panel1.Controls.Add(nameLabel);
@@ -1365,6 +1477,70 @@
             this.splitContainer5.SplitterDistance = 797;
             this.splitContainer5.TabIndex = 0;
             // 
+            // idTextBox3
+            // 
+            this.idTextBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "id", true));
+            this.idTextBox3.Location = new System.Drawing.Point(34, 14);
+            this.idTextBox3.Name = "idTextBox3";
+            this.idTextBox3.Size = new System.Drawing.Size(247, 38);
+            this.idTextBox3.TabIndex = 1;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(34, 58);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(247, 38);
+            this.nameTextBox.TabIndex = 3;
+            // 
+            // nationalityTextBox
+            // 
+            this.nationalityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Nationality", true));
+            this.nationalityTextBox.Location = new System.Drawing.Point(34, 102);
+            this.nationalityTextBox.Name = "nationalityTextBox";
+            this.nationalityTextBox.Size = new System.Drawing.Size(247, 38);
+            this.nationalityTextBox.TabIndex = 5;
+            // 
+            // iqamaNoTextBox
+            // 
+            this.iqamaNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "IqamaNo", true));
+            this.iqamaNoTextBox.Location = new System.Drawing.Point(34, 146);
+            this.iqamaNoTextBox.Name = "iqamaNoTextBox";
+            this.iqamaNoTextBox.Size = new System.Drawing.Size(247, 38);
+            this.iqamaNoTextBox.TabIndex = 7;
+            // 
+            // iqamaExpiryTextBox
+            // 
+            this.iqamaExpiryTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "IqamaExpiry", true));
+            this.iqamaExpiryTextBox.Location = new System.Drawing.Point(34, 190);
+            this.iqamaExpiryTextBox.Name = "iqamaExpiryTextBox";
+            this.iqamaExpiryTextBox.Size = new System.Drawing.Size(247, 38);
+            this.iqamaExpiryTextBox.TabIndex = 9;
+            // 
+            // salaryTextBox
+            // 
+            this.salaryTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "salary", true));
+            this.salaryTextBox.Location = new System.Drawing.Point(34, 234);
+            this.salaryTextBox.Name = "salaryTextBox";
+            this.salaryTextBox.Size = new System.Drawing.Size(247, 38);
+            this.salaryTextBox.TabIndex = 11;
+            // 
+            // allowancesTextBox
+            // 
+            this.allowancesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "allowances", true));
+            this.allowancesTextBox.Location = new System.Drawing.Point(34, 278);
+            this.allowancesTextBox.Name = "allowancesTextBox";
+            this.allowancesTextBox.Size = new System.Drawing.Size(247, 38);
+            this.allowancesTextBox.TabIndex = 13;
+            // 
+            // totalTextBox3
+            // 
+            this.totalTextBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "total", true));
+            this.totalTextBox3.Location = new System.Drawing.Point(34, 322);
+            this.totalTextBox3.Name = "totalTextBox3";
+            this.totalTextBox3.Size = new System.Drawing.Size(247, 38);
+            this.totalTextBox3.TabIndex = 15;
+            // 
             // workersDataGridView
             // 
             this.workersDataGridView.AllowUserToOrderColumns = true;
@@ -1378,7 +1554,8 @@
             this.dataGridViewTextBoxColumn29,
             this.dataGridViewTextBoxColumn30,
             this.dataGridViewTextBoxColumn31,
-            this.dataGridViewTextBoxColumn32});
+            this.dataGridViewTextBoxColumn32,
+            this.deduct});
             this.workersDataGridView.DataSource = this.workersBindingSource;
             this.workersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.workersDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -1386,142 +1563,6 @@
             this.workersDataGridView.RowTemplate.Height = 40;
             this.workersDataGridView.Size = new System.Drawing.Size(1603, 911);
             this.workersDataGridView.TabIndex = 0;
-            // 
-            // idLabel3
-            // 
-            idLabel3.AutoSize = true;
-            idLabel3.Location = new System.Drawing.Point(287, 17);
-            idLabel3.Name = "idLabel3";
-            idLabel3.Size = new System.Drawing.Size(69, 32);
-            idLabel3.TabIndex = 0;
-            idLabel3.Text = "الكود:";
-            // 
-            // idTextBox3
-            // 
-            this.idTextBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "id", true));
-            this.idTextBox3.Location = new System.Drawing.Point(34, 14);
-            this.idTextBox3.Name = "idTextBox3";
-            this.idTextBox3.Size = new System.Drawing.Size(247, 38);
-            this.idTextBox3.TabIndex = 1;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(287, 61);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(72, 32);
-            nameLabel.TabIndex = 2;
-            nameLabel.Text = "الاسم:";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(34, 58);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(247, 38);
-            this.nameTextBox.TabIndex = 3;
-            // 
-            // nationalityLabel
-            // 
-            nationalityLabel.AutoSize = true;
-            nationalityLabel.Location = new System.Drawing.Point(287, 105);
-            nationalityLabel.Name = "nationalityLabel";
-            nationalityLabel.Size = new System.Drawing.Size(93, 32);
-            nationalityLabel.TabIndex = 4;
-            nationalityLabel.Text = "الجنسية:";
-            // 
-            // nationalityTextBox
-            // 
-            this.nationalityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Nationality", true));
-            this.nationalityTextBox.Location = new System.Drawing.Point(34, 102);
-            this.nationalityTextBox.Name = "nationalityTextBox";
-            this.nationalityTextBox.Size = new System.Drawing.Size(247, 38);
-            this.nationalityTextBox.TabIndex = 5;
-            // 
-            // iqamaNoLabel
-            // 
-            iqamaNoLabel.AutoSize = true;
-            iqamaNoLabel.Location = new System.Drawing.Point(287, 149);
-            iqamaNoLabel.Name = "iqamaNoLabel";
-            iqamaNoLabel.Size = new System.Drawing.Size(121, 32);
-            iqamaNoLabel.TabIndex = 6;
-            iqamaNoLabel.Text = "رقم الاقامة:";
-            // 
-            // iqamaNoTextBox
-            // 
-            this.iqamaNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "IqamaNo", true));
-            this.iqamaNoTextBox.Location = new System.Drawing.Point(34, 146);
-            this.iqamaNoTextBox.Name = "iqamaNoTextBox";
-            this.iqamaNoTextBox.Size = new System.Drawing.Size(247, 38);
-            this.iqamaNoTextBox.TabIndex = 7;
-            // 
-            // iqamaExpiryLabel
-            // 
-            iqamaExpiryLabel.AutoSize = true;
-            iqamaExpiryLabel.Location = new System.Drawing.Point(287, 193);
-            iqamaExpiryLabel.Name = "iqamaExpiryLabel";
-            iqamaExpiryLabel.Size = new System.Drawing.Size(197, 32);
-            iqamaExpiryLabel.TabIndex = 8;
-            iqamaExpiryLabel.Text = "تاريخ انتهاء الاقامة:";
-            // 
-            // iqamaExpiryTextBox
-            // 
-            this.iqamaExpiryTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "IqamaExpiry", true));
-            this.iqamaExpiryTextBox.Location = new System.Drawing.Point(34, 190);
-            this.iqamaExpiryTextBox.Name = "iqamaExpiryTextBox";
-            this.iqamaExpiryTextBox.Size = new System.Drawing.Size(247, 38);
-            this.iqamaExpiryTextBox.TabIndex = 9;
-            // 
-            // salaryLabel
-            // 
-            salaryLabel.AutoSize = true;
-            salaryLabel.Location = new System.Drawing.Point(287, 237);
-            salaryLabel.Name = "salaryLabel";
-            salaryLabel.Size = new System.Drawing.Size(84, 32);
-            salaryLabel.TabIndex = 10;
-            salaryLabel.Text = "الراتب:";
-            // 
-            // salaryTextBox
-            // 
-            this.salaryTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "salary", true));
-            this.salaryTextBox.Location = new System.Drawing.Point(34, 234);
-            this.salaryTextBox.Name = "salaryTextBox";
-            this.salaryTextBox.Size = new System.Drawing.Size(247, 38);
-            this.salaryTextBox.TabIndex = 11;
-            // 
-            // allowancesLabel
-            // 
-            allowancesLabel.AutoSize = true;
-            allowancesLabel.Location = new System.Drawing.Point(287, 281);
-            allowancesLabel.Name = "allowancesLabel";
-            allowancesLabel.Size = new System.Drawing.Size(183, 32);
-            allowancesLabel.TabIndex = 12;
-            allowancesLabel.Text = "البدلات او الخصم:";
-            // 
-            // allowancesTextBox
-            // 
-            this.allowancesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "allowances", true));
-            this.allowancesTextBox.Location = new System.Drawing.Point(34, 278);
-            this.allowancesTextBox.Name = "allowancesTextBox";
-            this.allowancesTextBox.Size = new System.Drawing.Size(247, 38);
-            this.allowancesTextBox.TabIndex = 13;
-            // 
-            // totalLabel3
-            // 
-            totalLabel3.AutoSize = true;
-            totalLabel3.Location = new System.Drawing.Point(287, 325);
-            totalLabel3.Name = "totalLabel3";
-            totalLabel3.Size = new System.Drawing.Size(101, 32);
-            totalLabel3.TabIndex = 14;
-            totalLabel3.Text = "الاجمالي:";
-            // 
-            // totalTextBox3
-            // 
-            this.totalTextBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "total", true));
-            this.totalTextBox3.Location = new System.Drawing.Point(34, 322);
-            this.totalTextBox3.Name = "totalTextBox3";
-            this.totalTextBox3.Size = new System.Drawing.Size(247, 38);
-            this.totalTextBox3.TabIndex = 15;
             // 
             // toolStripContainer1
             // 
@@ -1544,26 +1585,6 @@
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.projectReportsBindingNavigator);
             this.toolStripContainer1.TopToolStripPanelVisible = false;
             // 
-            // printToolStripButton
-            // 
-            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
-            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(44, 44);
-            this.printToolStripButton.Text = "&Print";
-            this.printToolStripButton.Visible = false;
-            // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
             // toolStripContainer2
             // 
             this.toolStripContainer2.BottomToolStripPanelVisible = false;
@@ -1573,11 +1594,12 @@
             this.toolStripContainer2.ContentPanel.AutoScroll = true;
             this.toolStripContainer2.ContentPanel.BackgroundImage = global::eladadElrakamy.Properties.Resources.background;
             this.toolStripContainer2.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.SpentReportPanel);
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.FinalReportsPanel);
             this.toolStripContainer2.ContentPanel.Controls.Add(this.WorkersPanel);
             this.toolStripContainer2.ContentPanel.Controls.Add(this.loginPanel);
             this.toolStripContainer2.ContentPanel.Controls.Add(this.toolStripContainer1);
             this.toolStripContainer2.ContentPanel.Controls.Add(this.InventoryReportsPanel);
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.SpentReportPanel);
             this.toolStripContainer2.ContentPanel.Controls.Add(this.InventoryPanel);
             this.toolStripContainer2.ContentPanel.Controls.Add(this.projectReportsPanel);
             this.toolStripContainer2.ContentPanel.Controls.Add(this.homePanel);
@@ -1595,20 +1617,186 @@
             // 
             this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
-            // inventoryReportsBindingSource
+            // printPreviewDialog1
             // 
-            this.inventoryReportsBindingSource.DataMember = "inventoryReports";
-            this.inventoryReportsBindingSource.DataSource = this.adadDatabaseDataSet1;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
-            // adadDatabaseDataSet1
+            // deductLabel
             // 
-            this.adadDatabaseDataSet1.DataSetName = "adadDatabaseDataSet1";
-            this.adadDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            deductLabel.AutoSize = true;
+            deductLabel.Location = new System.Drawing.Point(287, 366);
+            deductLabel.Name = "deductLabel";
+            deductLabel.Size = new System.Drawing.Size(85, 32);
+            deductLabel.TabIndex = 16;
+            deductLabel.Text = "الخصم:";
+            // 
+            // deductTextBox
+            // 
+            this.deductTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "deduct", true));
+            this.deductTextBox.Location = new System.Drawing.Point(34, 366);
+            this.deductTextBox.Name = "deductTextBox";
+            this.deductTextBox.Size = new System.Drawing.Size(247, 38);
+            this.deductTextBox.TabIndex = 17;
+            // 
+            // deduct
+            // 
+            this.deduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deduct.DataPropertyName = "deduct";
+            this.deduct.HeaderText = "الخصم";
+            this.deduct.Name = "deduct";
+            // 
+            // FinalReportsPanel
+            // 
+            this.FinalReportsPanel.BackgroundImage = global::eladadElrakamy.Properties.Resources.background;
+            this.FinalReportsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FinalReportsPanel.Controls.Add(this.RestVAT);
+            this.FinalReportsPanel.Controls.Add(this.button6);
+            this.FinalReportsPanel.Controls.Add(this.VATOut);
+            this.FinalReportsPanel.Controls.Add(this.button5);
+            this.FinalReportsPanel.Controls.Add(this.restIncomeLbl);
+            this.FinalReportsPanel.Controls.Add(this.button4);
+            this.FinalReportsPanel.Controls.Add(this.VATIN);
+            this.FinalReportsPanel.Controls.Add(this.button3);
+            this.FinalReportsPanel.Controls.Add(this.spentLbl);
+            this.FinalReportsPanel.Controls.Add(this.button2);
+            this.FinalReportsPanel.Controls.Add(this.incomeLbl);
+            this.FinalReportsPanel.Controls.Add(this.incomeGetBtn);
+            this.FinalReportsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FinalReportsPanel.Location = new System.Drawing.Point(0, 0);
+            this.FinalReportsPanel.Name = "FinalReportsPanel";
+            this.FinalReportsPanel.Size = new System.Drawing.Size(2404, 911);
+            this.FinalReportsPanel.TabIndex = 19;
+            this.FinalReportsPanel.Visible = false;
+            // 
+            // incomeGetBtn
+            // 
+            this.incomeGetBtn.Location = new System.Drawing.Point(368, 121);
+            this.incomeGetBtn.Name = "incomeGetBtn";
+            this.incomeGetBtn.Size = new System.Drawing.Size(248, 101);
+            this.incomeGetBtn.TabIndex = 1;
+            this.incomeGetBtn.Text = "الايرادات";
+            this.incomeGetBtn.UseVisualStyleBackColor = true;
+            this.incomeGetBtn.Click += new System.EventHandler(this.incomeGetBtn_Click);
+            // 
+            // incomeLbl
+            // 
+            this.incomeLbl.AutoSize = true;
+            this.incomeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incomeLbl.Location = new System.Drawing.Point(79, 176);
+            this.incomeLbl.Name = "incomeLbl";
+            this.incomeLbl.Size = new System.Drawing.Size(0, 58);
+            this.incomeLbl.TabIndex = 2;
+            // 
+            // spentLbl
+            // 
+            this.spentLbl.AutoSize = true;
+            this.spentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spentLbl.Location = new System.Drawing.Point(79, 308);
+            this.spentLbl.Name = "spentLbl";
+            this.spentLbl.Size = new System.Drawing.Size(0, 58);
+            this.spentLbl.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(368, 253);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(248, 101);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "المصروفات";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // VATIN
+            // 
+            this.VATIN.AutoSize = true;
+            this.VATIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VATIN.Location = new System.Drawing.Point(726, 176);
+            this.VATIN.Name = "VATIN";
+            this.VATIN.Size = new System.Drawing.Size(0, 58);
+            this.VATIN.TabIndex = 6;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1015, 121);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(248, 101);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "ضرائب مدخلات";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // restIncomeLbl
+            // 
+            this.restIncomeLbl.AutoSize = true;
+            this.restIncomeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restIncomeLbl.Location = new System.Drawing.Point(79, 451);
+            this.restIncomeLbl.Name = "restIncomeLbl";
+            this.restIncomeLbl.Size = new System.Drawing.Size(0, 58);
+            this.restIncomeLbl.TabIndex = 8;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(368, 396);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(248, 101);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "صافي الربح";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // VATOut
+            // 
+            this.VATOut.AutoSize = true;
+            this.VATOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VATOut.Location = new System.Drawing.Point(726, 308);
+            this.VATOut.Name = "VATOut";
+            this.VATOut.Size = new System.Drawing.Size(0, 58);
+            this.VATOut.TabIndex = 10;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(1015, 253);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(248, 101);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "ضرائب مخرجات";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // RestVAT
+            // 
+            this.RestVAT.AutoSize = true;
+            this.RestVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RestVAT.Location = new System.Drawing.Point(726, 451);
+            this.RestVAT.Name = "RestVAT";
+            this.RestVAT.Size = new System.Drawing.Size(0, 58);
+            this.RestVAT.TabIndex = 12;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1015, 396);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(248, 101);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "الضريبة المستحقة";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // workersBindingSource
             // 
             this.workersBindingSource.DataMember = "Workers";
             this.workersBindingSource.DataSource = this.adadDatabaseDataSet1;
+            // 
+            // adadDatabaseDataSet1
+            // 
+            this.adadDatabaseDataSet1.DataSetName = "adadDatabaseDataSet1";
+            this.adadDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn25
             // 
@@ -1656,7 +1844,7 @@
             // 
             this.dataGridViewTextBoxColumn31.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn31.DataPropertyName = "allowances";
-            this.dataGridViewTextBoxColumn31.HeaderText = "البدلات او الخصم";
+            this.dataGridViewTextBoxColumn31.HeaderText = "البدلات";
             this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
             // 
             // dataGridViewTextBoxColumn32
@@ -1666,38 +1854,76 @@
             this.dataGridViewTextBoxColumn32.HeaderText = "الاجمالي";
             this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
             // 
+            // projectReportsBindingSource
+            // 
+            this.projectReportsBindingSource.DataMember = "projectReports";
+            this.projectReportsBindingSource.DataSource = this.adadDatabaseDataSet1;
+            // 
+            // inventoryReportsBindingSource
+            // 
+            this.inventoryReportsBindingSource.DataMember = "inventoryReports";
+            this.inventoryReportsBindingSource.DataSource = this.adadDatabaseDataSet1;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "invID";
+            this.dataGridViewTextBoxColumn8.HeaderText = "كود المخزون";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "qty";
+            this.dataGridViewTextBoxColumn9.HeaderText = "الكمية";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "price";
+            this.dataGridViewTextBoxColumn10.HeaderText = "السعر";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "discount";
+            this.dataGridViewTextBoxColumn11.HeaderText = "الخصم";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "VAT";
+            this.dataGridViewTextBoxColumn12.HeaderText = "الضريبة";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "total";
+            this.dataGridViewTextBoxColumn13.HeaderText = "الاجمالي";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "sentto";
+            this.dataGridViewTextBoxColumn14.HeaderText = "مرسل الى";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "notes";
+            this.dataGridViewTextBoxColumn15.HeaderText = "ملاحظات";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
             // spentReportBindingSource
             // 
             this.spentReportBindingSource.DataMember = "spentReport";
             this.spentReportBindingSource.DataSource = this.adadDatabaseDataSet1;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn21.HeaderText = "الكود";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "description";
-            this.dataGridViewTextBoxColumn22.HeaderText = "التوصيف";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "VAT";
-            this.dataGridViewTextBoxColumn23.HeaderText = "الضريبة";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "total";
-            this.dataGridViewTextBoxColumn24.HeaderText = "الاجمالي";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             // 
             // inventoryBindingSource
             // 
@@ -1738,11 +1964,6 @@
             this.dataGridViewTextBoxColumn20.DataPropertyName = "notes";
             this.dataGridViewTextBoxColumn20.HeaderText = "الملاحظات";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // projectReportsBindingSource
-            // 
-            this.projectReportsBindingSource.DataMember = "projectReports";
-            this.projectReportsBindingSource.DataSource = this.adadDatabaseDataSet1;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -1804,6 +2025,7 @@
             this.tableAdapterManager.InventoryTableAdapter = null;
             this.tableAdapterManager.optionalTableAdapter = null;
             this.tableAdapterManager.projectReportsTableAdapter = this.projectReportsTableAdapter;
+            this.tableAdapterManager.projectSpentTableAdapter = null;
             this.tableAdapterManager.spentReportTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = eladadElrakamy.adadDatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = null;
@@ -1825,95 +2047,57 @@
             // 
             this.workersTableAdapter.ClearBeforeFill = true;
             // 
-            // id
+            // dataGridViewTextBoxColumn21
             // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "الكود";
-            this.id.Name = "id";
+            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn21.HeaderText = "الكود";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             // 
-            // dataGridViewTextBoxColumn8
+            // dataGridViewTextBoxColumn22
             // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "invID";
-            this.dataGridViewTextBoxColumn8.HeaderText = "كود المخزون";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "description";
+            this.dataGridViewTextBoxColumn22.HeaderText = "التوصيف";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             // 
-            // dataGridViewTextBoxColumn9
+            // value
             // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "qty";
-            this.dataGridViewTextBoxColumn9.HeaderText = "الكمية";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.value.DataPropertyName = "value";
+            this.value.HeaderText = "السعر";
+            this.value.Name = "value";
             // 
-            // dataGridViewTextBoxColumn10
+            // dataGridViewTextBoxColumn23
             // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "price";
-            this.dataGridViewTextBoxColumn10.HeaderText = "السعر";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "VAT";
+            this.dataGridViewTextBoxColumn23.HeaderText = "الضريبة";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             // 
-            // dataGridViewTextBoxColumn11
+            // dataGridViewTextBoxColumn24
             // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "discount";
-            this.dataGridViewTextBoxColumn11.HeaderText = "الخصم";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "total";
+            this.dataGridViewTextBoxColumn24.HeaderText = "الاجمالي";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             // 
-            // dataGridViewTextBoxColumn12
+            // valueLabel1
             // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "VAT";
-            this.dataGridViewTextBoxColumn12.HeaderText = "الضريبة";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            valueLabel1.AutoSize = true;
+            valueLabel1.Location = new System.Drawing.Point(277, 211);
+            valueLabel1.Name = "valueLabel1";
+            valueLabel1.Size = new System.Drawing.Size(78, 32);
+            valueLabel1.TabIndex = 8;
+            valueLabel1.Text = "السعر:";
             // 
-            // dataGridViewTextBoxColumn13
+            // valueTextBox1
             // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "total";
-            this.dataGridViewTextBoxColumn13.HeaderText = "الاجمالي";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "sentto";
-            this.dataGridViewTextBoxColumn14.HeaderText = "مرسل الى";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "notes";
-            this.dataGridViewTextBoxColumn15.HeaderText = "ملاحظات";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // idLabel4
-            // 
-            idLabel4.AutoSize = true;
-            idLabel4.Location = new System.Drawing.Point(300, 55);
-            idLabel4.Name = "idLabel4";
-            idLabel4.Size = new System.Drawing.Size(69, 32);
-            idLabel4.TabIndex = 18;
-            idLabel4.Text = "الكود:";
-            // 
-            // idTextBox4
-            // 
-            this.idTextBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryReportsBindingSource, "id", true));
-            this.idTextBox4.Location = new System.Drawing.Point(13, 52);
-            this.idTextBox4.Name = "idTextBox4";
-            this.idTextBox4.Size = new System.Drawing.Size(257, 38);
-            this.idTextBox4.TabIndex = 19;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
+            this.valueTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.spentReportBindingSource, "value", true));
+            this.valueTextBox1.Location = new System.Drawing.Point(16, 212);
+            this.valueTextBox1.Name = "valueTextBox1";
+            this.valueTextBox1.Size = new System.Drawing.Size(255, 38);
+            this.valueTextBox1.TabIndex = 9;
             // 
             // Home
             // 
@@ -1934,22 +2118,22 @@
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.projectReportsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.projectReportsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectReportsBindingNavigator)).EndInit();
-            this.projectReportsBindingNavigator.ResumeLayout(false);
-            this.projectReportsBindingNavigator.PerformLayout();
-            this.InventoryReportsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryReportsDataGridView)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.projectReportsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectReportsBindingNavigator)).EndInit();
+            this.projectReportsBindingNavigator.ResumeLayout(false);
+            this.projectReportsBindingNavigator.PerformLayout();
+            this.InventoryReportsPanel.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryReportsDataGridView)).EndInit();
             this.InventoryPanel.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -1980,12 +2164,14 @@
             this.toolStripContainer2.TopToolStripPanel.PerformLayout();
             this.toolStripContainer2.ResumeLayout(false);
             this.toolStripContainer2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryReportsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adadDatabaseDataSet1)).EndInit();
+            this.FinalReportsPanel.ResumeLayout(false);
+            this.FinalReportsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adadDatabaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectReportsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryReportsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spentReportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectReportsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2007,10 +2193,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Panel loginPanel;
-        private System.Windows.Forms.ToolStripMenuItem تقاريرالايراداتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تقاريرالمصروفاتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تقاريرالضريبةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تقاريرالمخزونToolStripMenuItem1;
         private System.Windows.Forms.Panel projectReportsPanel;
         private adadDatabaseDataSet1 adadDatabaseDataSet1;
         private System.Windows.Forms.BindingSource projectReportsBindingSource;
@@ -2090,10 +2272,6 @@
         private System.Windows.Forms.TextBox vATTextBox2;
         private System.Windows.Forms.TextBox totalTextBox2;
         private System.Windows.Forms.DataGridView spentReportDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.Panel WorkersPanel;
         private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.BindingSource workersBindingSource;
@@ -2107,14 +2285,6 @@
         private System.Windows.Forms.TextBox allowancesTextBox;
         private System.Windows.Forms.TextBox totalTextBox3;
         private System.Windows.Forms.DataGridView workersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStripButton printToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
@@ -2132,6 +2302,35 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.TextBox deductTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deduct;
+        private System.Windows.Forms.Panel FinalReportsPanel;
+        private System.Windows.Forms.Label incomeLbl;
+        private System.Windows.Forms.Button incomeGetBtn;
+        private System.Windows.Forms.Label RestVAT;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label VATOut;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label restIncomeLbl;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label VATIN;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label spentLbl;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox valueTextBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn value;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
     }
 }
 

@@ -47,6 +47,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
     </Reference>
@@ -67,6 +70,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>adadDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="adadDatabaseDataSet1.cs">
+      <DependentUpon>adadDatabaseDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="adadDatabaseDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -142,6 +148,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="reportVAT.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

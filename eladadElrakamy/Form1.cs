@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using PagedList;
 using System.Data.SqlClient;
+using Microsoft.Office.Interop.Word;
 
 namespace eladadElrakamy
 {
@@ -31,6 +25,8 @@ namespace eladadElrakamy
             InventoryPanel.Visible = false;
             SpentReportPanel.Visible = false;
             WorkersPanel.Visible = false;
+            FinalReportsPanel.Visible = false;
+            printToolStripButton.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +42,7 @@ namespace eladadElrakamy
                     homePanel.Visible = true;
                     projectReportsBindingNavigator.Visible = false;
                     homePanel.BringToFront();
-                    printToolStripButton.Visible = true;
+                    printToolStripButton.Visible = false;
                 }
             }
         }
@@ -56,7 +52,7 @@ namespace eladadElrakamy
             HideAllPanels();
             maintoolstrip.Visible = false;
             toolStripButton1.Visible = false;
-            printToolStripButton.Visible = true;
+            printToolStripButton.Visible = false;
             projectReportsBindingNavigator.Visible = false;
             loginPanel.Visible = true;
         }
@@ -128,6 +124,125 @@ namespace eladadElrakamy
         {
                 HideAllPanels();
             WorkersPanel.Visible = true;
+        }
+
+        private void incomeGetBtn_Click(object sender, EventArgs e)
+        {
+            string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            if(con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand com = new SqlCommand();
+            com.CommandText = "SELECT dbo.getIncome()";
+            com.Connection = con;
+            incomeLbl.Text = com.ExecuteScalar().ToString();
+            con.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand com = new SqlCommand();
+            com.CommandText = "SELECT dbo.getSpent()";
+            com.Connection = con;
+            spentLbl.Text = com.ExecuteScalar().ToString();
+            con.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand com = new SqlCommand();
+            com.CommandText = "SELECT dbo.getRestIncome()";
+            com.Connection = con;
+            restIncomeLbl.Text = com.ExecuteScalar().ToString();
+            con.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand com = new SqlCommand();
+            com.CommandText = "SELECT dbo.getSpentVAT()";
+            com.Connection = con;
+            VATIN.Text = com.ExecuteScalar().ToString();
+            con.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand com = new SqlCommand();
+            com.CommandText = "SELECT dbo.getTakenVAT()";
+            com.Connection = con;
+            VATOut.Text = com.ExecuteScalar().ToString();
+            con.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand com = new SqlCommand();
+            com.CommandText = "SELECT dbo.getRestVAT()";
+            com.Connection = con;
+            RestVAT.Text = com.ExecuteScalar().ToString();
+            con.Close();
+        }
+
+        private void التقاريرالشاملةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            FinalReportsPanel.Visible = true;
+            printToolStripButton.Visible = true;
+        }
+
+        private void printToolStripButton_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
+            app.Visible = true;
+            app.WindowState = Microsoft.Office.Interop.Word.WdWindowState.wdWindowStateNormal;
+
+            Microsoft.Office.Interop.Word.Document document = app.Documents.Add();
+
+
+            Microsoft.Office.Interop.Word.Paragraph paragraph;
+            paragraph = document.Paragraphs.Add();
+            paragraph.Range.Text = "ضريبة مدخلات: " + VATIN.Text + "\n   ضريبة مخرجات: " + VATOut.Text + "\n   الضريبة المستحقة: " + RestVAT.Text;
+            
+            document.SaveAs();
         }
     }
 }
