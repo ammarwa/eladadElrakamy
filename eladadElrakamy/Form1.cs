@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PagedList;
+using System.Data.SqlClient;
 
 namespace eladadElrakamy
 {
@@ -44,6 +46,7 @@ namespace eladadElrakamy
                     homePanel.Visible = true;
                     projectReportsBindingNavigator.Visible = false;
                     homePanel.BringToFront();
+                    printToolStripButton.Visible = true;
                 }
             }
         }
@@ -53,8 +56,7 @@ namespace eladadElrakamy
             HideAllPanels();
             maintoolstrip.Visible = false;
             toolStripButton1.Visible = false;
-            //toolStripContainer1.Visible = false;
-            //toolStripContainer2.Visible = false;
+            printToolStripButton.Visible = true;
             projectReportsBindingNavigator.Visible = false;
             loginPanel.Visible = true;
         }
@@ -124,7 +126,7 @@ namespace eladadElrakamy
 
         private void شؤونالموظفينToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HideAllPanels();
+                HideAllPanels();
             WorkersPanel.Visible = true;
         }
     }
