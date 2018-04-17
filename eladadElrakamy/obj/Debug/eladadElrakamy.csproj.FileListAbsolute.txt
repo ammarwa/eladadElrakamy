@@ -10,3 +10,6 @@ D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.pdb
 D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\adadDatabase.mdf
 D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\adadDatabase_log.ldf
 D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.csprojResolveAssemblyReference.cache
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\PagedList.dll
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Debug\PagedList.xml
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Debug\eladadElrakamy.csproj.CopyComplete

@@ -1,0 +1,14 @@
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Release\adadDatabase.mdf
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Release\adadDatabase_log.ldf
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Release\eladadElrakamy.exe.config
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Release\eladadElrakamy.exe
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Release\eladadElrakamy.pdb
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Release\PagedList.dll
+D:\projects\eladadElrakamy\eladadElrakamy\bin\Release\PagedList.xml
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.Home.resources
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.Properties.Resources.resources
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.csproj.GenerateResource.cache
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.csproj.CoreCompileInputs.cache
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.csproj.CopyComplete
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.exe
+D:\projects\eladadElrakamy\eladadElrakamy\obj\Release\eladadElrakamy.pdb
