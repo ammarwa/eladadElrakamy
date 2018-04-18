@@ -86,6 +86,7 @@ namespace eladadElrakamy
         private void projectReportsMenuItem_Click(object sender, EventArgs e)
         {
             HideAllPanels();
+            this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
             projectReportsPanel.Visible = true;
             projectReportsBindingNavigator.Visible = false;
             projectReportsPanel.BringToFront();
@@ -103,24 +104,28 @@ namespace eladadElrakamy
             maintoolstrip.Visible = true;
             toolStripButton1.Visible = true;
             projectReportsBindingNavigator.Visible = false;
+            this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
             InventoryReportsPanel.Visible = true;
         }
 
         private void المخزونToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllPanels();
+            this.inventoryTableAdapter.Fill(this.adadDatabaseDataSet1.Inventory);
             InventoryPanel.Visible = true;
         }
 
         private void المصروفاتالعامةToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllPanels();
+            this.spentReportTableAdapter.Fill(this.adadDatabaseDataSet1.spentReport);
             SpentReportPanel.Visible = true;
         }
 
         private void شؤونالموظفينToolStripMenuItem_Click(object sender, EventArgs e)
         {
                 HideAllPanels();
+            this.workersTableAdapter.Fill(this.adadDatabaseDataSet1.Workers);
             WorkersPanel.Visible = true;
         }
 
@@ -349,6 +354,7 @@ namespace eladadElrakamy
                 Console.WriteLine("Inserting Data Successfully");
                 con.Close();
                 this.inventoryTableAdapter.Fill(this.adadDatabaseDataSet1.Inventory);
+                this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
             }
             catch (Exception exp)
             {
@@ -391,6 +397,7 @@ namespace eladadElrakamy
                 Console.WriteLine("Inserting Data Successfully");
                 con.Close();
                 this.inventoryTableAdapter.Fill(this.adadDatabaseDataSet1.Inventory);
+                this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
             }
             catch (Exception exp)
             {
@@ -440,6 +447,7 @@ namespace eladadElrakamy
                 Console.WriteLine(com.ExecuteNonQuery());
                 Console.WriteLine("Inserting Data Successfully");
                 con.Close();
+                this.inventoryTableAdapter.Fill(this.adadDatabaseDataSet1.Inventory);
                 this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
             }
             catch (Exception exp)
@@ -485,6 +493,7 @@ namespace eladadElrakamy
                 Console.WriteLine(com.ExecuteNonQuery());
                 Console.WriteLine("Inserting Data Successfully");
                 con.Close();
+                this.inventoryTableAdapter.Fill(this.adadDatabaseDataSet1.Inventory);
                 this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
             }
             catch (Exception exp)
@@ -626,6 +635,7 @@ namespace eladadElrakamy
                 Console.WriteLine(com.ExecuteNonQuery());
                 Console.WriteLine("Inserting Data Successfully");
                 con.Close();
+                this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
                 this.projectSpentTableAdapter.Fill(this.adadDatabaseDataSet1.projectSpent);
             }
             catch (Exception exp)
@@ -665,6 +675,7 @@ namespace eladadElrakamy
                 Console.WriteLine(com.ExecuteNonQuery());
                 Console.WriteLine("Inserting Data Successfully");
                 con.Close();
+                this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
                 this.projectSpentTableAdapter.Fill(this.adadDatabaseDataSet1.projectSpent);
             }
             catch (Exception exp)
@@ -705,6 +716,7 @@ namespace eladadElrakamy
                 Console.WriteLine("Inserting Data Successfully");
                 con.Close();
                 this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
+                this.projectSpentTableAdapter.Fill(this.adadDatabaseDataSet1.projectSpent);
             }
             catch (Exception exp)
             {
@@ -744,6 +756,7 @@ namespace eladadElrakamy
                 Console.WriteLine("Inserting Data Successfully");
                 con.Close();
                 this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
+                this.projectSpentTableAdapter.Fill(this.adadDatabaseDataSet1.projectSpent);
             }
             catch (Exception exp)
             {
@@ -754,7 +767,198 @@ namespace eladadElrakamy
         private void مصروفاتالمشاريعToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllPanels();
+            this.projectSpentTableAdapter.Fill(this.adadDatabaseDataSet1.projectSpent);
             projectSpentPanel.Visible = true;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(idTextBox3.Text);
+
+            string stmt = "DELETE FROM Workers WHERE id = @id;";
+
+            try
+            {
+                string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+                SqlConnection con = new SqlConnection(connectionString);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand com = new SqlCommand(stmt, con);
+                com.Parameters.Add("@id", SqlDbType.Int);
+
+                com.Parameters["@id"].Value = id;
+
+                Console.WriteLine(com.ExecuteNonQuery());
+                Console.WriteLine("Inserting Data Successfully");
+                con.Close();
+                this.workersTableAdapter.Fill(this.adadDatabaseDataSet1.Workers);
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine("Exception Occre while creating table:" + exp.Message + "\t" + exp.GetType());
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(idTextBox.Text);
+
+            string stmt = "DELETE FROM projectReports WHERE id = @id;";
+
+            try
+            {
+                string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+                SqlConnection con = new SqlConnection(connectionString);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand com = new SqlCommand(stmt, con);
+                com.Parameters.Add("@id", SqlDbType.Int);
+
+                com.Parameters["@id"].Value = id;
+
+                Console.WriteLine(com.ExecuteNonQuery());
+                Console.WriteLine("Inserting Data Successfully");
+                con.Close();
+                this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
+                this.projectSpentTableAdapter.Fill(this.adadDatabaseDataSet1.projectSpent);
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine("Exception Occre while creating table:" + exp.Message + "\t" + exp.GetType());
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(idTextBox5.Text);
+
+            string stmt = "DELETE FROM projectSpent WHERE id = @id;";
+
+            try
+            {
+                string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+                SqlConnection con = new SqlConnection(connectionString);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand com = new SqlCommand(stmt, con);
+                com.Parameters.Add("@id", SqlDbType.Int);
+
+                com.Parameters["@id"].Value = id;
+
+                Console.WriteLine(com.ExecuteNonQuery());
+                Console.WriteLine("Inserting Data Successfully");
+                con.Close();
+                this.projectReportsTableAdapter.Fill(this.adadDatabaseDataSet1.projectReports);
+                this.projectSpentTableAdapter.Fill(this.adadDatabaseDataSet1.projectSpent);
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine("Exception Occre while creating table:" + exp.Message + "\t" + exp.GetType());
+            }
+        }
+
+        private void projectSpentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(idTextBox1.Text);
+
+            string stmt = "DELETE FROM Inventory WHERE id = @id;";
+
+            try
+            {
+                string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+                SqlConnection con = new SqlConnection(connectionString);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand com = new SqlCommand(stmt, con);
+                com.Parameters.Add("@id", SqlDbType.Int);
+
+                com.Parameters["@id"].Value = id;
+
+                Console.WriteLine(com.ExecuteNonQuery());
+                Console.WriteLine("Inserting Data Successfully");
+                con.Close();
+                this.inventoryTableAdapter.Fill(this.adadDatabaseDataSet1.Inventory);
+                this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine("Exception Occre while creating table:" + exp.Message + "\t" + exp.GetType());
+            }
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(idTextBox4.Text);
+            int invID = Convert.ToInt32(invIDTextBox.Text);
+
+            string stmt = "DELETE FROM inventoryReports WHERE id = @id;";
+
+            try
+            {
+                string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+                SqlConnection con = new SqlConnection(connectionString);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand com = new SqlCommand(stmt, con);
+                com.Parameters.Add("@id", SqlDbType.Int);
+
+                com.Parameters["@id"].Value = id;
+
+                Console.WriteLine(com.ExecuteNonQuery());
+                Console.WriteLine("Inserting Data Successfully");
+                con.Close();
+                this.inventoryTableAdapter.Fill(this.adadDatabaseDataSet1.Inventory);
+                this.inventoryReportsTableAdapter.Fill(this.adadDatabaseDataSet1.inventoryReports);
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine("Exception Occre while creating table:" + exp.Message + "\t" + exp.GetType());
+            }
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(idTextBox2.Text);
+
+            string stmt = "DELETE FROM spentReport WHERE id = @id;";
+
+            try
+            {
+                string connectionString = Properties.Settings.Default.adadDatabaseConnectionString;
+                SqlConnection con = new SqlConnection(connectionString);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand com = new SqlCommand(stmt, con);
+                com.Parameters.Add("@id", SqlDbType.Int);
+
+                com.Parameters["@id"].Value = id;
+
+                Console.WriteLine(com.ExecuteNonQuery());
+                Console.WriteLine("Inserting Data Successfully");
+                con.Close();
+                this.spentReportTableAdapter.Fill(this.adadDatabaseDataSet1.spentReport);
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine("Exception Occre while creating table:" + exp.Message + "\t" + exp.GetType());
+            }
         }
     }
 }
